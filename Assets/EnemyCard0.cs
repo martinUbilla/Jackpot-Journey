@@ -1,0 +1,49 @@
+using System;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class EnemyCard0 : MonoBehaviour
+{
+    [SerializeField] Transform targetDestination;
+    [SerializeField] float speed = 3f;
+    GameObject targetGameObject;
+    private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        targetGameObject = targetDestination.gameObject;
+    }
+
+    private void FixedUpdate()
+    {
+        Vector2 direction = (targetDestination.position - transform.position).normalized;
+        rb.linearVelocity = direction * speed;
+
+        // Voltear sprite hacia la izquierda o derecha
+        if (direction.x < -0.01f)
+        {
+            spriteRenderer.flipX = false; // Mira a la izquierda
+        }
+        else if (direction.x > 0.01f)
+        {
+            spriteRenderer.flipX = true; // Mira a la derecha
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+    
+
+        if (collision.gameObject == targetGameObject)
+        {
+            Attack();
+        }
+    }
+
+    private void Attack()
+    {
+        Debug.Log("Attacking the aweonao");
+    }
+}
