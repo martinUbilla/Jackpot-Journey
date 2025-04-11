@@ -1,9 +1,8 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyCard0 : MonoBehaviour
+public class EnemyCard3 : MonoBehaviour
 {
+
     [SerializeField] int hp = 999;
     [SerializeField] int damage = 1;
     [SerializeField] Transform targetDestination;
@@ -28,16 +27,16 @@ public class EnemyCard0 : MonoBehaviour
         // Voltear sprite hacia la izquierda o derecha
         if (direction.x < -0.01f)
         {
-            spriteRenderer.flipX = false; // Mira a la izquierda
+            spriteRenderer.flipX = true; // Mira a la izquierda
         }
         else if (direction.x > 0.01f)
         {
-            spriteRenderer.flipX = true; // Mira a la derecha
+            spriteRenderer.flipX = false; // Mira a la derecha
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-    
+
 
         if (collision.gameObject == targetGameObject)
         {
