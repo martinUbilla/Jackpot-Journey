@@ -1222,7 +1222,51 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      2D_TopDown_Tileset_Casino_640x512_0: -3445479754894728479
+      2D_TopDown_Tileset_Casino_640x512_1: 2308650587885645485
+      2D_TopDown_Tileset_Casino_640x512_10: 2675717808301068355
+      2D_TopDown_Tileset_Casino_640x512_11: 7217706107130525598
+      2D_TopDown_Tileset_Casino_640x512_12: 5541028090700194686
+      2D_TopDown_Tileset_Casino_640x512_13: -5144078096450959267
+      2D_TopDown_Tileset_Casino_640x512_14: -3405057635214889030
+      2D_TopDown_Tileset_Casino_640x512_15: 9012116882570481137
+      2D_TopDown_Tileset_Casino_640x512_16: -127523702885554980
+      2D_TopDown_Tileset_Casino_640x512_17: 479565119758502288
+      2D_TopDown_Tileset_Casino_640x512_18: 735456088307403039
+      2D_TopDown_Tileset_Casino_640x512_19: 3969585267725503022
+      2D_TopDown_Tileset_Casino_640x512_2: 1211656118469459355
+      2D_TopDown_Tileset_Casino_640x512_20: 5753352034390281488
+      2D_TopDown_Tileset_Casino_640x512_21: 3196807587572668535
+      2D_TopDown_Tileset_Casino_640x512_22: -1360605271098495609
+      2D_TopDown_Tileset_Casino_640x512_23: -3731199849801939787
+      2D_TopDown_Tileset_Casino_640x512_24: -7894611725670452839
+      2D_TopDown_Tileset_Casino_640x512_25: -4340205265439987720
+      2D_TopDown_Tileset_Casino_640x512_26: 656546007676676417
+      2D_TopDown_Tileset_Casino_640x512_27: -4470718782367609289
+      2D_TopDown_Tileset_Casino_640x512_28: -3090599108690211258
+      2D_TopDown_Tileset_Casino_640x512_29: 8281145495739969819
+      2D_TopDown_Tileset_Casino_640x512_3: 7046916236925490026
+      2D_TopDown_Tileset_Casino_640x512_30: -5571850482727455078
+      2D_TopDown_Tileset_Casino_640x512_31: -5293352290417709269
+      2D_TopDown_Tileset_Casino_640x512_32: -4512774142505721975
+      2D_TopDown_Tileset_Casino_640x512_33: 4540636472080714985
+      2D_TopDown_Tileset_Casino_640x512_34: -2198111635386248919
+      2D_TopDown_Tileset_Casino_640x512_35: -3241046238636791597
+      2D_TopDown_Tileset_Casino_640x512_36: -3506724361678679095
+      2D_TopDown_Tileset_Casino_640x512_37: 7274894703305251895
+      2D_TopDown_Tileset_Casino_640x512_38: -5868271615121865363
+      2D_TopDown_Tileset_Casino_640x512_39: -5554528746702570811
+      2D_TopDown_Tileset_Casino_640x512_4: -277836604595138858
+      2D_TopDown_Tileset_Casino_640x512_40: 1631990852792970079
+      2D_TopDown_Tileset_Casino_640x512_41: 4814915715473561205
+      2D_TopDown_Tileset_Casino_640x512_42: -427217279332321711
+      2D_TopDown_Tileset_Casino_640x512_43: 6424123930976767106
+      2D_TopDown_Tileset_Casino_640x512_5: -7753384050575948232
+      2D_TopDown_Tileset_Casino_640x512_6: 5614514262282046221
+      2D_TopDown_Tileset_Casino_640x512_7: -3279437184258525194
+      2D_TopDown_Tileset_Casino_640x512_8: -7709962851785374530
+      2D_TopDown_Tileset_Casino_640x512_9: 6244908194037905298
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

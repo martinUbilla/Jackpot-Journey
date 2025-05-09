@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fondo_tile_esferico_1024x512_0: 3835847373537053513
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
