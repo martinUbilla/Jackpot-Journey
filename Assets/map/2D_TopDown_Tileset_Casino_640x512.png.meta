@@ -1,0 +1,1230 @@
+fileFormatVersion: 2
+guid: f24ba32cb5e5ae14686a5907dfba024b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3445479754894728479
+    second: 2D_TopDown_Tileset_Casino_640x512_0
+  - first:
+      213: 2308650587885645485
+    second: 2D_TopDown_Tileset_Casino_640x512_1
+  - first:
+      213: 1211656118469459355
+    second: 2D_TopDown_Tileset_Casino_640x512_2
+  - first:
+      213: 7046916236925490026
+    second: 2D_TopDown_Tileset_Casino_640x512_3
+  - first:
+      213: -277836604595138858
+    second: 2D_TopDown_Tileset_Casino_640x512_4
+  - first:
+      213: -7753384050575948232
+    second: 2D_TopDown_Tileset_Casino_640x512_5
+  - first:
+      213: 5614514262282046221
+    second: 2D_TopDown_Tileset_Casino_640x512_6
+  - first:
+      213: -3279437184258525194
+    second: 2D_TopDown_Tileset_Casino_640x512_7
+  - first:
+      213: -7709962851785374530
+    second: 2D_TopDown_Tileset_Casino_640x512_8
+  - first:
+      213: 6244908194037905298
+    second: 2D_TopDown_Tileset_Casino_640x512_9
+  - first:
+      213: 2675717808301068355
+    second: 2D_TopDown_Tileset_Casino_640x512_10
+  - first:
+      213: 7217706107130525598
+    second: 2D_TopDown_Tileset_Casino_640x512_11
+  - first:
+      213: 5541028090700194686
+    second: 2D_TopDown_Tileset_Casino_640x512_12
+  - first:
+      213: -5144078096450959267
+    second: 2D_TopDown_Tileset_Casino_640x512_13
+  - first:
+      213: -3405057635214889030
+    second: 2D_TopDown_Tileset_Casino_640x512_14
+  - first:
+      213: 9012116882570481137
+    second: 2D_TopDown_Tileset_Casino_640x512_15
+  - first:
+      213: -127523702885554980
+    second: 2D_TopDown_Tileset_Casino_640x512_16
+  - first:
+      213: 479565119758502288
+    second: 2D_TopDown_Tileset_Casino_640x512_17
+  - first:
+      213: 735456088307403039
+    second: 2D_TopDown_Tileset_Casino_640x512_18
+  - first:
+      213: 3969585267725503022
+    second: 2D_TopDown_Tileset_Casino_640x512_19
+  - first:
+      213: 5753352034390281488
+    second: 2D_TopDown_Tileset_Casino_640x512_20
+  - first:
+      213: 3196807587572668535
+    second: 2D_TopDown_Tileset_Casino_640x512_21
+  - first:
+      213: -1360605271098495609
+    second: 2D_TopDown_Tileset_Casino_640x512_22
+  - first:
+      213: -3731199849801939787
+    second: 2D_TopDown_Tileset_Casino_640x512_23
+  - first:
+      213: -7894611725670452839
+    second: 2D_TopDown_Tileset_Casino_640x512_24
+  - first:
+      213: -4340205265439987720
+    second: 2D_TopDown_Tileset_Casino_640x512_25
+  - first:
+      213: 656546007676676417
+    second: 2D_TopDown_Tileset_Casino_640x512_26
+  - first:
+      213: -4470718782367609289
+    second: 2D_TopDown_Tileset_Casino_640x512_27
+  - first:
+      213: -3090599108690211258
+    second: 2D_TopDown_Tileset_Casino_640x512_28
+  - first:
+      213: 8281145495739969819
+    second: 2D_TopDown_Tileset_Casino_640x512_29
+  - first:
+      213: -5571850482727455078
+    second: 2D_TopDown_Tileset_Casino_640x512_30
+  - first:
+      213: -5293352290417709269
+    second: 2D_TopDown_Tileset_Casino_640x512_31
+  - first:
+      213: -4512774142505721975
+    second: 2D_TopDown_Tileset_Casino_640x512_32
+  - first:
+      213: 4540636472080714985
+    second: 2D_TopDown_Tileset_Casino_640x512_33
+  - first:
+      213: -2198111635386248919
+    second: 2D_TopDown_Tileset_Casino_640x512_34
+  - first:
+      213: -3241046238636791597
+    second: 2D_TopDown_Tileset_Casino_640x512_35
+  - first:
+      213: -3506724361678679095
+    second: 2D_TopDown_Tileset_Casino_640x512_36
+  - first:
+      213: 7274894703305251895
+    second: 2D_TopDown_Tileset_Casino_640x512_37
+  - first:
+      213: -5868271615121865363
+    second: 2D_TopDown_Tileset_Casino_640x512_38
+  - first:
+      213: -5554528746702570811
+    second: 2D_TopDown_Tileset_Casino_640x512_39
+  - first:
+      213: 1631990852792970079
+    second: 2D_TopDown_Tileset_Casino_640x512_40
+  - first:
+      213: 4814915715473561205
+    second: 2D_TopDown_Tileset_Casino_640x512_41
+  - first:
+      213: -427217279332321711
+    second: 2D_TopDown_Tileset_Casino_640x512_42
+  - first:
+      213: 6424123930976767106
+    second: 2D_TopDown_Tileset_Casino_640x512_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 517
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e223b8fa623f20d0800000000000000
+      internalID: -3445479754894728479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_1
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 457
+        width: 15
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daeab695a79f90020800000000000000
+      internalID: 2308650587885645485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_2
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 457
+        width: 15
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9dfc43f1daa0d010800000000000000
+      internalID: 1211656118469459355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_3
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 409
+        width: 28
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6350e73bfcabc160800000000000000
+      internalID: 7046916236925490026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_4
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 336
+        width: 84
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6de8185841de42cf0800000000000000
+      internalID: -277836604595138858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_5
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 394
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 836cd320942766490800000000000000
+      internalID: -7753384050575948232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_6
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 338
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0b8fad79f2caed40800000000000000
+      internalID: 5614514262282046221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_7
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 337
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7301191491d72d0800000000000000
+      internalID: -3279437184258525194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_8
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 343
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb400eba2a5b00590800000000000000
+      internalID: -7709962851785374530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_9
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 276
+        width: 21
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2973e806aee5aa650800000000000000
+      internalID: 6244908194037905298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_10
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 319
+        width: 38
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 340d8fa8b2f022520800000000000000
+      internalID: 2675717808301068355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_11
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 276
+        width: 21
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97bea0a6717a2460800000000000000
+      internalID: 7217706107130525598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_12
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 314
+        width: 70
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7365acd0bfa5ec40800000000000000
+      internalID: 5541028090700194686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_13
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 310
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d584c2cc9309c98b0800000000000000
+      internalID: -5144078096450959267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_14
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 307
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abfe84d1f1eceb0d0800000000000000
+      internalID: -3405057635214889030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_15
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 239
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd0ae37e88711d70800000000000000
+      internalID: 9012116882570481137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_16
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 239
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4601d2ed1fa3ef0800000000000000
+      internalID: -127523702885554980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_17
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 245
+        width: 10
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0998fd18fe1c7a600800000000000000
+      internalID: 479565119758502288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_18
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 249
+        width: 15
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f19067b6a6dd43a00800000000000000
+      internalID: 735456088307403039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_19
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 249
+        width: 15
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a076ce4ccc61730800000000000000
+      internalID: 3969585267725503022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_20
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 249
+        width: 14
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d8a95513308df40800000000000000
+      internalID: 5753352034390281488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_21
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 207
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778da8040975d5c20800000000000000
+      internalID: 3196807587572668535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_22
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 207
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d66a8f6b82e1de0800000000000000
+      internalID: -1360605271098495609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_23
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 193
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b4809e518d183cc0800000000000000
+      internalID: -3731199849801939787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_24
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 233
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99177c38674b07290800000000000000
+      internalID: -7894611725670452839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_25
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 214
+        width: 38
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f76b257e4e74c3c0800000000000000
+      internalID: -4340205265439987720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_26
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 207
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149e44e8d158c1900800000000000000
+      internalID: 656546007676676417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_27
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 193
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ecf4e44f0d4f1c0800000000000000
+      internalID: -4470718782367609289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_28
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 193
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e816f3c7cfb15d0800000000000000
+      internalID: -3090599108690211258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_29
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 208
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1138e6f3f98ce270800000000000000
+      internalID: 8281145495739969819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_30
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 194
+        width: 34
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96f073c18fcca2b0800000000000000
+      internalID: -5571850482727455078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_31
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 138
+        width: 44
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2fe6a2232c3a86b0800000000000000
+      internalID: -5293352290417709269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_32
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 175
+        width: 45
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fd06cb3d76f51c0800000000000000
+      internalID: -4512774142505721975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_33
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 175
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eccd8460d4930f30800000000000000
+      internalID: 4540636472080714985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_34
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 159
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 921562c1d1dbe71e0800000000000000
+      internalID: -2198111635386248919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_35
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 128
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d820752e9d7503d0800000000000000
+      internalID: -3241046238636791597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_36
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 128
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c31fe0c5cc955fc0800000000000000
+      internalID: -3506724361678679095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_37
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 143
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c51e8403e95f460800000000000000
+      internalID: 7274894703305251895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_38
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 127
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d654727be06bf8ea0800000000000000
+      internalID: -5868271615121865363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_39
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 34
+        width: 98
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5caf816b8895ae2b0800000000000000
+      internalID: -5554528746702570811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_40
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 17
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5b6961b80ff5a610800000000000000
+      internalID: 1631990852792970079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_41
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 31
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5765f3c255402d240800000000000000
+      internalID: 4814915715473561205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_42
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 0
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156fc7fd528321af0800000000000000
+      internalID: -427217279332321711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D_TopDown_Tileset_Casino_640x512_43
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 0
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28cc4f2cda2172950800000000000000
+      internalID: 6424123930976767106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

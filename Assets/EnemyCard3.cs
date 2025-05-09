@@ -46,6 +46,18 @@ public class EnemyCard3 : MonoBehaviour
 
     private void Attack()
     {
-        Debug.Log("Attacking the aweonao");
+        if (targetCharacter == null)
+        {
+            targetCharacter = targetGameObject.GetComponent<Character>();
+        }
+        targetCharacter.TakeDamage(damage);
+    }
+    public void TakeDamage(int damage)
+    {
+        hp -= damage;
+        if (hp < 1)
+        {
+            Destroy(gameObject);
+        }
     }
 }

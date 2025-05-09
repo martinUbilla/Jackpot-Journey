@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public int maxHp = 1000;
+    public int currentHp = 1000;
+    [SerializeField] StatusBar hpBar;
+    public void TakeDamage(int damage)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        currentHp -= damage;
+        if(currentHp < 1)
+        {
+            Destroy(gameObject);
+        }
+        hpBar.SetState(currentHp, maxHp);
     }
 }

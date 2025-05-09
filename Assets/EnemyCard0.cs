@@ -13,6 +13,7 @@ public class EnemyCard0 : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
 
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -47,6 +48,18 @@ public class EnemyCard0 : MonoBehaviour
 
     private void Attack()
     {
-        Debug.Log("Attacking the aweonao");
+        if (targetCharacter == null)
+        {
+            targetCharacter = targetGameObject.GetComponent<Character>();
+        }
+        targetCharacter.TakeDamage(damage);
+    }
+    public void TakeDamage(int attackDamage)
+    {
+        hp -= attackDamage;
+        if(hp < 1)
+        {
+            Destroy(gameObject);
+        }
     }
 }
