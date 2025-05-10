@@ -6,7 +6,7 @@ public class EnemyCard0 : MonoBehaviour
 {
     [SerializeField] int hp = 999;
     [SerializeField] int damage = 1;
-    [SerializeField] Transform targetDestination;
+    Transform targetDestination;
     Character targetCharacter;
     [SerializeField] float speed = 3f;
     GameObject targetGameObject;
@@ -18,7 +18,12 @@ public class EnemyCard0 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        targetGameObject = targetDestination.gameObject;
+    }
+
+    public void SetTarget(GameObject target)
+    {
+        targetGameObject = target;  
+        targetDestination = target.transform;
     }
 
     private void FixedUpdate()
