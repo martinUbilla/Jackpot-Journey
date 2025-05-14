@@ -1279,6 +1279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   experienceBar: {fileID: 617770425}
+  arma: {fileID: 0}
 --- !u!1 &1193304005
 GameObject:
   m_ObjectHideFlags: 0

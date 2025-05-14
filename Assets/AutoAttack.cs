@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -38,6 +39,14 @@ public class AutoAttack : MonoBehaviour
             Collider2D enemy = enemiesInRange[0];
             if (enemy != null)
             {
+                if (playerMove.lastHorizontalVector > 0)
+                {
+                    spriteWhipRight.SetActive(true);
+                }
+                else
+                {
+                    spriteWhipLeft.SetActive(true);
+                }
                 // Obtener el componente de salud del enemigo y aplicar daño
                 EnemyCard0 enemyHealth = enemy.GetComponent<EnemyCard0>();
                
@@ -48,14 +57,7 @@ public class AutoAttack : MonoBehaviour
                 }
             }
         }
-        if(playerMove.lastHorizontalVector > 0)
-        {
-            spriteWhipRight.SetActive(true);
-        }
-        else
-        {
-            spriteWhipLeft.SetActive(true);
-        }
+       
     }
 
     // Visualización del rango en el editor
@@ -64,4 +66,6 @@ public class AutoAttack : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
+
+
 }

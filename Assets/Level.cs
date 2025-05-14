@@ -6,7 +6,7 @@ public class Level : MonoBehaviour
     int level = 1;
     int experience = 0;
     [SerializeField] ExperienceBar experienceBar;
-    
+    [SerializeField] AutoAttack arma;
     int TO_LEVEL_UP
     {
         get
@@ -33,6 +33,9 @@ public class Level : MonoBehaviour
             experience -= TO_LEVEL_UP;
             level += 1;
             experienceBar.SetLevelText(level);
+
         }
     }
+
+
 }
