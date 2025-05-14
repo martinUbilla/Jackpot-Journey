@@ -7,7 +7,7 @@ public class AutoAttack : MonoBehaviour
     [Header("Attack Settings")]
     [SerializeField] private float attackRange = 2f;     // Rango de ataque
     [SerializeField] private float attackCooldown = 0.5f; // Tiempo entre ataques
-    [SerializeField] private int damage = 10;             // Daño infligido por ataque
+    [SerializeField] private int damage;             // Daño infligido por ataque
     [SerializeField] private LayerMask enemyLayer;        // Capa de enemigos
     [SerializeField] GameObject spriteWhipLeft;
     [SerializeField] GameObject spriteWhipRight;
@@ -66,6 +66,9 @@ public class AutoAttack : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
-
+    public void subirDamage(int amount)
+    {
+        damage += amount;
+    }
 
 }

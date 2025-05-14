@@ -5,6 +5,7 @@ public class Level : MonoBehaviour
 {
     int level = 1;
     int experience = 0;
+    [SerializeField] Character character;
     [SerializeField] ExperienceBar experienceBar;
     [SerializeField] AutoAttack arma;
     int TO_LEVEL_UP
@@ -32,10 +33,20 @@ public class Level : MonoBehaviour
         {
             experience -= TO_LEVEL_UP;
             level += 1;
+            HealToFull();
+            IncreaseDamage();
             experienceBar.SetLevelText(level);
 
         }
     }
 
+    private void IncreaseDamage()
+    {
+        arma.subirDamage(100);
+    }
 
+    private void HealToFull()
+    {
+        character.Heal(character.maxHp);
+    }
 }
