@@ -8,9 +8,14 @@ public class AutoAttack : MonoBehaviour
     [SerializeField] private float attackCooldown = 0.5f; // Tiempo entre ataques
     [SerializeField] private int damage = 10;             // Daño infligido por ataque
     [SerializeField] private LayerMask enemyLayer;        // Capa de enemigos
-
+    [SerializeField] GameObject spriteWhipLeft;
+    [SerializeField] GameObject spriteWhipRight;
     private float nextAttackTime = 0f;
-
+    PlayerMove playerMove;
+    private void Awake()
+    {
+        playerMove = GetComponentInParent<PlayerMove>();
+    }
     void Update()
     {
         // Verificar si es el momento de atacar
@@ -42,6 +47,14 @@ public class AutoAttack : MonoBehaviour
                     Debug.Log("Atacando al enemigo: " + enemy.name);
                 }
             }
+        }
+        if(playerMove.lastHorizontalVector > 0)
+        {
+            spriteWhipRight.SetActive(true);
+        }
+        else
+        {
+            spriteWhipLeft.SetActive(true);
         }
     }
 

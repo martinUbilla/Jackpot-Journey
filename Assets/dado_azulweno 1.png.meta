@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: a98b3c8bad9c8734580e5769556c4abf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8663370998887497620
+    second: dado_azulweno_0
+  - first:
+      213: 7115254940787480741
+    second: dado_azulweno_1
+  - first:
+      213: -6036563681934658207
+    second: dado_azulweno_2
+  - first:
+      213: 5361176273576062825
+    second: dado_azulweno_3
+  - first:
+      213: -1388079232576057098
+    second: dado_azulweno_4
+  - first:
+      213: 8158945977658660119
+    second: dado_azulweno_5
+  - first:
+      213: 199578429587959025
+    second: dado_azulweno_6
+  - first:
+      213: -4700114106004283443
+    second: dado_azulweno_7
+  - first:
+      213: 2586634801296863227
+    second: dado_azulweno_8
+  - first:
+      213: -5006736514739593155
+    second: dado_azulweno_9
+  - first:
+      213: 2203355625005963443
+    second: dado_azulweno_10
+  - first:
+      213: 7730317783052812140
+    second: dado_azulweno_11
+  - first:
+      213: 6723155408844825089
+    second: dado_azulweno_12
+  - first:
+      213: -201106330294365199
+    second: dado_azulweno_13
+  - first:
+      213: 5980575280561629207
+    second: dado_azulweno_14
+  - first:
+      213: 767594298205304524
+    second: dado_azulweno_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dado_azulweno_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 755
+        width: 248
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60c3ed1af585c780800000000000000
+      internalID: -8663370998887497620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_1
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 754
+        width: 215
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a81bff9ba67eb260800000000000000
+      internalID: 7115254940787480741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_2
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 756
+        width: 226
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165b24a7051d93ca0800000000000000
+      internalID: -6036563681934658207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_3
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 756
+        width: 258
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96fe0c48a69b66a40800000000000000
+      internalID: 5361176273576062825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_4
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 507
+        width: 217
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f01536da4d8cbce0800000000000000
+      internalID: -1388079232576057098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_5
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 510
+        width: 213
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71552f383266a3170800000000000000
+      internalID: 8158945977658660119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_6
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 510
+        width: 218
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fcab68368b05c200800000000000000
+      internalID: 199578429587959025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_7
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 510
+        width: 240
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcfdfc37f17d5ceb0800000000000000
+      internalID: -4700114106004283443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_8
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 275
+        width: 244
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff66fea5a295e320800000000000000
+      internalID: 2586634801296863227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_9
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 275
+        width: 201
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3028faaaaf748ab0800000000000000
+      internalID: -5006736514739593155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_10
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 274
+        width: 226
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b8d65e5444e39e10800000000000000
+      internalID: 2203355625005963443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_11
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 274
+        width: 228
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f7fb3111b974b60800000000000000
+      internalID: 7730317783052812140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_12
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 42
+        width: 240
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10221f939327d4d50800000000000000
+      internalID: 6723155408844825089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_13
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 42
+        width: 213
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f3d8bcabd6853df0800000000000000
+      internalID: -201106330294365199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_14
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 42
+        width: 225
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 718ab5ef7854ff250800000000000000
+      internalID: 5980575280561629207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dado_azulweno_15
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 42
+        width: 246
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc6742482fa07aa00800000000000000
+      internalID: 767594298205304524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dado_azulweno_0: -8663370998887497620
+      dado_azulweno_1: 7115254940787480741
+      dado_azulweno_10: 2203355625005963443
+      dado_azulweno_11: 7730317783052812140
+      dado_azulweno_12: 6723155408844825089
+      dado_azulweno_13: -201106330294365199
+      dado_azulweno_14: 5980575280561629207
+      dado_azulweno_15: 767594298205304524
+      dado_azulweno_2: -6036563681934658207
+      dado_azulweno_3: 5361176273576062825
+      dado_azulweno_4: -1388079232576057098
+      dado_azulweno_5: 8158945977658660119
+      dado_azulweno_6: 199578429587959025
+      dado_azulweno_7: -4700114106004283443
+      dado_azulweno_8: 2586634801296863227
+      dado_azulweno_9: -5006736514739593155
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

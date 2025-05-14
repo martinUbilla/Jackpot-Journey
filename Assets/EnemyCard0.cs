@@ -12,6 +12,7 @@ public class EnemyCard0 : MonoBehaviour
     GameObject targetGameObject;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    [SerializeField] int experience_reward = 400;
 
 
     private void Awake()
@@ -62,9 +63,11 @@ public class EnemyCard0 : MonoBehaviour
     public void TakeDamage(int attackDamage)
     {
         hp -= attackDamage;
-        if(hp < 1)
+        if (hp < 1)
         {
+            targetGameObject.GetComponent<Level>().addExperience(experience_reward);
             Destroy(gameObject);
+
         }
     }
 }
