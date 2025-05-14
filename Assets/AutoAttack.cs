@@ -42,10 +42,12 @@ public class AutoAttack : MonoBehaviour
                 if (playerMove.lastHorizontalVector > 0)
                 {
                     spriteWhipRight.SetActive(true);
+               
                 }
                 else
                 {
                     spriteWhipLeft.SetActive(true);
+                
                 }
                 // Obtener el componente de salud del enemigo y aplicar daño
                 EnemyCard0 enemyHealth = enemy.GetComponent<EnemyCard0>();

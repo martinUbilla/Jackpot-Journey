@@ -18,7 +18,7 @@ public class EnemyCard0 : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     public void SetTarget(GameObject target)
@@ -29,17 +29,18 @@ public class EnemyCard0 : MonoBehaviour
 
     private void FixedUpdate()
     {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         Vector2 direction = (targetDestination.position - transform.position).normalized;
         rb.linearVelocity = direction * speed;
 
         // Voltear sprite hacia la izquierda o derecha
         if (direction.x < -0.01f)
         {
-            spriteRenderer.flipX = false; // Mira a la izquierda
+            spriteRenderer.flipX = true; // Mira a la izquierda
         }
         else if (direction.x > 0.01f)
         {
-            spriteRenderer.flipX = true; // Mira a la derecha
+            spriteRenderer.flipX = false; // Mira a la derecha
         }
     }
     private void OnCollisionStay2D(Collision2D collision)

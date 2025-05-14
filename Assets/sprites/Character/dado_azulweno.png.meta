@@ -522,7 +522,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dado_azulweno_0: -8663370998887497620
+      dado_azulweno_1: 7115254940787480741
+      dado_azulweno_10: 2203355625005963443
+      dado_azulweno_11: 7730317783052812140
+      dado_azulweno_12: 6723155408844825089
+      dado_azulweno_13: -201106330294365199
+      dado_azulweno_14: 5980575280561629207
+      dado_azulweno_15: 767594298205304524
+      dado_azulweno_2: -6036563681934658207
+      dado_azulweno_3: 5361176273576062825
+      dado_azulweno_4: -1388079232576057098
+      dado_azulweno_5: 8158945977658660119
+      dado_azulweno_6: 199578429587959025
+      dado_azulweno_7: -4700114106004283443
+      dado_azulweno_8: 2586634801296863227
+      dado_azulweno_9: -5006736514739593155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
