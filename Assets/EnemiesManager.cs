@@ -9,19 +9,8 @@ public class EnemiesManager : MonoBehaviour
     [SerializeField] Vector2 spawnArea;
     [SerializeField] float spawnTimer;
     [SerializeField] GameObject player;
-    float timer;
-
-    private void Update()
-    {
-        timer -= Time.deltaTime;
-        if (timer < 0f)
-        {
-            SpawnEnemy();
-            timer = spawnTimer;
-        }
-    }
-
-    private void SpawnEnemy()
+  
+    public void SpawnEnemy()
     {
         Vector3 position = GenerateRandomPosition();
 

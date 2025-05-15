@@ -8,6 +8,9 @@ public class Level : MonoBehaviour
     [SerializeField] Character character;
     [SerializeField] ExperienceBar experienceBar;
     [SerializeField] AutoAttack arma;
+    [SerializeField] GameObject winPanel;
+    [SerializeField] GameObject weaponParent;
+
     int TO_LEVEL_UP
     {
         get
@@ -36,7 +39,14 @@ public class Level : MonoBehaviour
             HealToFull();
             IncreaseDamage();
             experienceBar.SetLevelText(level);
-
+            if (level > 2)
+            {
+                GetComponent<PlayerMove>().enabled = false;
+                winPanel.SetActive(true);
+                weaponParent.SetActive(false);
+                character.maxHp = 1000000000;
+                HealToFull(); 
+            }
         }
     }
 
