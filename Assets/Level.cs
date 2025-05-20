@@ -10,7 +10,7 @@ public class Level : MonoBehaviour
     [SerializeField] AutoAttack arma;
     [SerializeField] GameObject winPanel;
     [SerializeField] GameObject weaponParent;
-
+    [SerializeField] UpgradePanelManager upgradePanel;
     int TO_LEVEL_UP
     {
         get
@@ -34,6 +34,7 @@ public class Level : MonoBehaviour
     {
         if (experience >= TO_LEVEL_UP)
         {
+            upgradePanel.OpenPanel();
             experience -= TO_LEVEL_UP;
             level += 1;
             HealToFull();
