@@ -4,7 +4,7 @@ public class EnemyBola8 : MonoBehaviour
 {
     [SerializeField] int hp = 999;
     [SerializeField] int damage = 1;
-    [SerializeField] Transform targetDestination;
+    Transform targetDestination;
     [SerializeField] float speed = 3f;
     [SerializeField] float chargeSpeed = 8f;
     [SerializeField] float attackRange = 5f;
@@ -26,6 +26,11 @@ public class EnemyBola8 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         targetGameObject = targetDestination.gameObject;
+    }
+    public void SetTarget(GameObject target)
+    {
+        targetGameObject = target;
+        targetDestination = target.transform;
     }
 
     private void FixedUpdate()

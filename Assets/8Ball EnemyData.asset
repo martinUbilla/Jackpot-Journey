@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: 8Ball EnemyData
   m_EditorClassIdentifier: 
   Name: 8Ball
-  animatedPrefab: {fileID: 6471159517397855590, guid: 7cfe6d050765f07468d5452b6fcf2b94, type: 3}
+  animatedPrefab: {fileID: 3776917673823511393, guid: 3502bbba7831f3f4ea9381d3a6d49199, type: 3}

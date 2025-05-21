@@ -1,16 +1,21 @@
 using System;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class EnemiesManager : MonoBehaviour
 {
     [SerializeField] GameObject enemy;
-    [SerializeField] GameObject enemyAnimation;
     [SerializeField] Vector2 spawnArea;
     [SerializeField] float spawnTimer;
     [SerializeField] GameObject player;
-  
-    public void SpawnEnemy()
+
+    private void Start()
+    {
+        
+        player = GameManager.instance.playerTransform.gameObject;
+    }
+    public void SpawnEnemy(EnemyData enemyToSpawn)
     {
         Vector3 position = GenerateRandomPosition();
 
@@ -19,8 +24,10 @@ public class EnemiesManager : MonoBehaviour
         GameObject newEnemy = Instantiate(enemy);
         newEnemy.transform.position = position;
         newEnemy.GetComponent<EnemyCard0>().SetTarget(player);
+        newEnemy.GetComponent<EnemyBola8>().SetTarget(player);
+        newEnemy.transform.parent = transform;
 
-        GameObject spriteObject = Instantiate(enemyAnimation);
+        GameObject spriteObject = Instantiate(enemyToSpawn.animatedPrefab);
         spriteObject.transform.parent = newEnemy.transform;
         spriteObject.transform.localPosition = Vector3.zero;
     }

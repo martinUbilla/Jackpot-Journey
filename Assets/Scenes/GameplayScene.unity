@@ -1944,6 +1944,7 @@ GameObject:
   - component: {fileID: 636090866}
   - component: {fileID: 636090868}
   - component: {fileID: 636090869}
+  - component: {fileID: 636090870}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2004,6 +2005,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1031675623}
+--- !u!114 &636090870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636090865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62cd33732159c144f89f5c167f1c6f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 902623621}
 --- !u!4 &636995294 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2728619151557574082, guid: e147bd208cacd484da06b4e8f4852b11, type: 3}
@@ -2557,6 +2571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 884881326}
   - component: {fileID: 884881325}
+  - component: {fileID: 884881327}
   m_Layer: 0
   m_Name: ---ENEMIGOS---
   m_TagString: Untagged
@@ -2577,7 +2592,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4746675208355982774, guid: 0ae803c530e101f488bcad525b8518a9, type: 3}
-  enemyAnimation: {fileID: 9126055190912866194, guid: 327c42207cdd63e4583fcabefc36746f, type: 3}
   spawnArea: {x: 10, y: 8}
   spawnTimer: 2
   player: {fileID: 1177535519}
@@ -2596,6 +2610,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &884881327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884881324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c994174de5e1a72438ffcce318a102b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 8450899595116225542, guid: c127244187381b54cb78fc211fe0729b, type: 3}
+  spawnArea: {x: 10, y: 8}
+  spawnTimer: 2
+  player: {fileID: 1177535519}
 --- !u!4 &902623621
 Transform:
   m_ObjectHideFlags: 0
