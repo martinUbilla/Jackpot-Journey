@@ -1,6 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyBola8 : MonoBehaviour
+public class EnemyBola8 : MonoBehaviour, IEnemy
 {
     [SerializeField] int hp = 999;
     [SerializeField] int damage = 1;
@@ -25,7 +26,6 @@ public class EnemyBola8 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        targetGameObject = targetDestination.gameObject;
     }
     public void SetTarget(GameObject target)
     {
@@ -35,6 +35,10 @@ public class EnemyBola8 : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log("Distance to target: " + Vector2.Distance(transform.position, targetDestination.position) + " | Cooldown: " + cooldownTime);
+
+        if (targetDestination == null) return;
+
         if (isCharging)
         {
             ChargeAttack();

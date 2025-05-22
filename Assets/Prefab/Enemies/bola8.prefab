@@ -123,6 +123,6 @@ MonoBehaviour:
   damage: 1
   speed: 3
   chargeSpeed: 8
-  attackRange: 5
-  chargeDuration: 1
+  attackRange: 10
+  chargeDuration: 3
   chargeCooldown: 3

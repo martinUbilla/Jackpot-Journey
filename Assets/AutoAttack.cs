@@ -50,7 +50,7 @@ public class AutoAttack : MonoBehaviour
                 
                 }
                 // Obtener el componente de salud del enemigo y aplicar daño
-                EnemyCard0 enemyHealth = enemy.GetComponent<EnemyCard0>();
+                IEnemy enemyHealth = enemy.GetComponent<IEnemy>();
                
                 if (enemyHealth != null)
                 {
