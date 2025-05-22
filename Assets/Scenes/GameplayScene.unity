@@ -3411,7 +3411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 4746675208355982774, guid: 0ae803c530e101f488bcad525b8518a9, type: 3}
   spawnArea: {x: 10, y: 8}
-  spawnTimer: 2
+  spawnTimer: 0
   player: {fileID: 1177535519}
 --- !u!4 &884881326
 Transform:
@@ -3441,8 +3441,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8450899595116225542, guid: c127244187381b54cb78fc211fe0729b, type: 3}
-  spawnArea: {x: 10, y: 8}
-  spawnTimer: 2
+  spawnArea: {x: 0, y: 0}
+  spawnTimer: 0
   player: {fileID: 1177535519}
 --- !u!4 &902623621
 Transform:

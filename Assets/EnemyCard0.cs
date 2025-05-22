@@ -2,7 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyCard0 : MonoBehaviour
+public class EnemyCard0 : MonoBehaviour, IEnemy
 {
     [SerializeField] int hp = 999;
     [SerializeField] int damage = 1;

@@ -23,8 +23,7 @@ public class EnemiesManager : MonoBehaviour
 
         GameObject newEnemy = Instantiate(enemy);
         newEnemy.transform.position = position;
-        newEnemy.GetComponent<EnemyCard0>().SetTarget(player);
-        newEnemy.GetComponent<EnemyBola8>().SetTarget(player);
+        newEnemy.GetComponent<IEnemy>().SetTarget(player);
         newEnemy.transform.parent = transform;
 
         GameObject spriteObject = Instantiate(enemyToSpawn.animatedPrefab);
