@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 
 public class Level : MonoBehaviour
@@ -11,6 +13,9 @@ public class Level : MonoBehaviour
     [SerializeField] GameObject winPanel;
     [SerializeField] GameObject weaponParent;
     [SerializeField] UpgradePanelManager upgradePanel;
+    [SerializeField] List<UpgradeData> upgrades;
+    List<UpgradeData> selectedUpgrades;
+    [SerializeField] List<UpgradeData> acquiredUpgrades;
     int TO_LEVEL_UP
     {
         get
@@ -34,7 +39,10 @@ public class Level : MonoBehaviour
     {
         if (experience >= TO_LEVEL_UP)
         {
-            upgradePanel.OpenPanel();
+            if(selectedUpgrades == null) { selectedUpgrades = new List<UpgradeData>(); }
+            selectedUpgrades.Clear();
+            selectedUpgrades.AddRange(GetUpgrades(4));
+            upgradePanel.OpenPanel(selectedUpgrades);
             experience -= TO_LEVEL_UP;
             level += 1;
             HealToFull();
@@ -59,5 +67,32 @@ public class Level : MonoBehaviour
     private void HealToFull()
     {
         character.Heal(character.maxHp);
+    }
+
+    public List<UpgradeData> GetUpgrades(int count)
+    {
+        List<UpgradeData> upgradeList = new List<UpgradeData>();
+
+        if(count > upgrades.Count)
+        {
+            count = upgrades.Count;
+        }
+
+        for (int i = 0; i < count; i++)
+        {
+            upgradeList.Add(upgrades[UnityEngine.Random.Range(0,upgrades.Count)]);
+
+        }
+        return upgradeList;
+    }
+
+    public void Upgrade(int selectedUpgradeID)
+    {
+        UpgradeData upgradeData = selectedUpgrades[selectedUpgradeID];
+
+        if (acquiredUpgrades == null){ acquiredUpgrades = new List<UpgradeData>(); }
+
+        acquiredUpgrades.Add(upgradeData);
+        upgrades.Remove(upgradeData);
     }
 }

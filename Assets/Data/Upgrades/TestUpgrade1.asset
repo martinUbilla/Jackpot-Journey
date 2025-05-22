@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90102423c8b578649b887d4da1807e92, type: 3}
+  m_Name: TestUpgrade1
+  m_EditorClassIdentifier: 
+  UpgradeType: 0
+  Name: test1
+  icon: {fileID: -7401315968094574992, guid: b540109be7036ef438c2da75c8478a02, type: 3}
