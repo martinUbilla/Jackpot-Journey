@@ -94,5 +94,11 @@ public class Level : MonoBehaviour
 
         acquiredUpgrades.Add(upgradeData);
         upgrades.Remove(upgradeData);
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null)
+        {
+            Debug.Log("Aplicando mejora: " + upgradeData.Name);
+            upgradeData.Apply(player);
+        }
     }
 }

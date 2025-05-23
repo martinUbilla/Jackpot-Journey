@@ -15,4 +15,5 @@ public class UpgradeButton : MonoBehaviour
     {
         icon.sprite = null;
     }
+
 }
