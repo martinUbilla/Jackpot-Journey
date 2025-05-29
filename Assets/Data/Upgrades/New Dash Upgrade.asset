@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90102423c8b578649b887d4da1807e92, type: 3}
-  m_Name: TestUpgrade2
+  m_Script: {fileID: 11500000, guid: 52881cd60987e4a4fb9531cf353868e9, type: 3}
+  m_Name: New Dash Upgrade
   m_EditorClassIdentifier: 
-  upgrade: {fileID: 2856712106799318010, guid: 9ecd63631e0af4744b29d474c9852da2, type: 3}
-  UpgradeType: 3
-  Name: dash
+  upgrade: {fileID: 0}
+  UpgradeType: 0
+  Name: 
   icon: {fileID: 4506540388319388062, guid: 5a17dd873087f8041be5e4ad7b04e9c7, type: 3}

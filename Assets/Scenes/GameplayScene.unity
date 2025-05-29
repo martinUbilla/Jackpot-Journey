@@ -4493,8 +4493,8 @@ MonoBehaviour:
   weaponParent: {fileID: 672013886}
   upgradePanel: {fileID: 636090869}
   upgrades:
+  - {fileID: 11400000, guid: 2f10382a8b34e8f42aa8ba96b1093ae5, type: 2}
   - {fileID: 11400000, guid: aa11b6b52b2e5584a80964219f446c19, type: 2}
-  - {fileID: 11400000, guid: 70fadc7375f7f6d448840718c4803d4c, type: 2}
   - {fileID: 11400000, guid: c68175ef92aa2bd4292754411dd504b1, type: 2}
   - {fileID: 11400000, guid: de8c8d80ef2e2c54c9f2a44d1c64838e, type: 2}
   acquiredUpgrades: []

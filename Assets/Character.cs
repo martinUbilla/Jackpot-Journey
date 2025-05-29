@@ -8,7 +8,7 @@ public class Character : MonoBehaviour
     [SerializeField] StatusBar hpBar;
     [HideInInspector] public Coins coins;
     private bool isDead;
-
+    private bool invulnerable;
     private void Awake()
     {
         coins = GetComponent<Coins>();  
@@ -21,6 +21,10 @@ public class Character : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (isDead == true)
+        {
+            return;
+        }
+        if(invulnerable == true)
         {
             return;
         }
@@ -44,7 +48,10 @@ public class Character : MonoBehaviour
         }
         hpBar.SetState(currentHp, maxHp);
     }
-
+    public void SetInvulnerable(bool invul)
+    {
+        invulnerable = invul;
+    }
 }
 
 
