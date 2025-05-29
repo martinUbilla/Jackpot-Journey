@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7ab8081e0b268249aee06ae9fe2fec8, type: 3}
-  m_Name: EnemyCard Data
+  m_Name: TragaMonedasData
   m_EditorClassIdentifier: 
-  Name: Card
-  enemyPrefab: {fileID: 4746675208355982774, guid: 0ae803c530e101f488bcad525b8518a9, type: 3}
-  animatedPrefab: {fileID: 9126055190912866194, guid: 327c42207cdd63e4583fcabefc36746f, type: 3}
+  Name: TragaMonedas
+  enemyPrefab: {fileID: 3208420184015305160, guid: 5198c1692d0269f4f9cf2eb7702e32b9, type: 3}
+  animatedPrefab: {fileID: 8617083188371654554, guid: 61e24d64a2df2fa4eba60a430334aadf, type: 3}

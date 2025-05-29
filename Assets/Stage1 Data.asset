@@ -20,8 +20,14 @@ MonoBehaviour:
     objectToSpawn: {fileID: 0}
     count: 3
   - eventType: 0
-    time: 20
+    time: 7
     message: 
-    enemyToSpawn: {fileID: 11400000, guid: bb7bae8bf836acc4186c4697eddc3955, type: 2}
+    enemyToSpawn: {fileID: 11400000, guid: 4c4f06e69c79d4049ac8f0c0162901c2, type: 2}
+    objectToSpawn: {fileID: 0}
+    count: 5
+  - eventType: 0
+    time: 7
+    message: 
+    enemyToSpawn: {fileID: 11400000, guid: 998ee9af7c9a7c4498df01802071544b, type: 2}
     objectToSpawn: {fileID: 0}
     count: 5

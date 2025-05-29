@@ -26,6 +26,7 @@ public class EnemyBola8 : MonoBehaviour, IEnemy
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        cooldownTime = 4;
     }
     public void SetTarget(GameObject target)
     {
@@ -35,9 +36,11 @@ public class EnemyBola8 : MonoBehaviour, IEnemy
 
     private void FixedUpdate()
     {
-        Debug.Log("Distance to target: " + Vector2.Distance(transform.position, targetDestination.position) + " | Cooldown: " + cooldownTime);
 
-        if (targetDestination == null) return;
+        if (targetDestination == null)
+        {
+            return;
+        };
 
         if (isCharging)
         {
@@ -53,6 +56,7 @@ public class EnemyBola8 : MonoBehaviour, IEnemy
         {
             StartCharge(direction);
         }
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
         // Voltear sprite hacia la izquierda o derecha
         if (direction.x < -0.01f)
@@ -93,7 +97,7 @@ public class EnemyBola8 : MonoBehaviour, IEnemy
         }
     }
 
-    private void Attack()
+    public void Attack()
     {
         if (targetCharacter == null)
         {

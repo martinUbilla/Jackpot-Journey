@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: b540109be7036ef438c2da75c8478a02
+guid: fcbf3185d118840459a9a22b8734d51d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7401315968094574992
-    second: poker-hand_0
+      213: -8595699227308581660
+    second: maquina_sprite_0
+  - first:
+      213: 8957924872235602470
+    second: maquina_sprite_1
+  - first:
+      213: 45188775363232114
+    second: maquina_sprite_2
+  - first:
+      213: -6014076680954815868
+    second: maquina_sprite_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,40 +105,93 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: poker-hand_0
+      name: maquina_sprite_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
+        x: 94
+        y: 563
+        width: 385
+        height: 378
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 076eb43475e394990800000000000000
-      internalID: -7401315968094574992
+      spriteID: 4ec1c204811f5b880800000000000000
+      internalID: -8595699227308581660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquina_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 564
+        width: 392
+        height: 373
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6225d3ec531f05c70800000000000000
+      internalID: 8957924872235602470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquina_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 107
+        width: 397
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2714c57a3fa80a000800000000000000
+      internalID: 45188775363232114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquina_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 107
+        width: 415
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a5ab36f15b98ca0800000000000000
+      internalID: -6014076680954815868
       vertices: []
       indices: 
       edges: []
@@ -138,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bf2fe2fddd1568a4499b6c18a81e261c
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      poker-hand_0: -7401315968094574992
+      maquina_sprite_0: -8595699227308581660
+      maquina_sprite_1: 8957924872235602470
+      maquina_sprite_2: 45188775363232114
+      maquina_sprite_3: -6014076680954815868
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

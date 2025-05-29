@@ -53,7 +53,7 @@ public class EnemyCard0 : MonoBehaviour, IEnemy
         }
     }
 
-    private void Attack()
+    public void Attack()
     {
         if (targetCharacter == null)
         {

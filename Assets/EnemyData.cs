@@ -4,5 +4,6 @@ using UnityEngine;
 public class EnemyData : ScriptableObject
 {
     public string Name;
-    public GameObject animatedPrefab;
+    public GameObject enemyPrefab;       
+    public GameObject animatedPrefab;    
 }

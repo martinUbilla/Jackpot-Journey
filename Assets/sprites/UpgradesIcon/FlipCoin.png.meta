@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FlipCoin_0: 6148173280092240427
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

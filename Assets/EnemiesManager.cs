@@ -2,6 +2,7 @@ using System;
 using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class EnemiesManager : MonoBehaviour
 {
@@ -14,14 +15,13 @@ public class EnemiesManager : MonoBehaviour
     {
         
         player = GameManager.instance.playerTransform.gameObject;
+
     }
     public void SpawnEnemy(EnemyData enemyToSpawn)
     {
-        Vector3 position = GenerateRandomPosition();
+        Vector3 position = GenerateRandomPosition() + player.transform.position;
 
-        position += player.transform.position;
-
-        GameObject newEnemy = Instantiate(enemy);
+        GameObject newEnemy = Instantiate(enemyToSpawn.enemyPrefab);
         newEnemy.transform.position = position;
         newEnemy.GetComponent<IEnemy>().SetTarget(player);
         newEnemy.transform.parent = transform;

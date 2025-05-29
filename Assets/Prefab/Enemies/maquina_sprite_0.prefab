@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8450899595116225542
+--- !u!1 &3208420184015305160
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,59 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 504935148845215362}
-  - component: {fileID: 8313515088134818363}
-  - component: {fileID: 9046496603405865497}
-  - component: {fileID: 6840817380785536759}
+  - component: {fileID: 1216921071847690527}
+  - component: {fileID: 8646007533753323397}
+  - component: {fileID: 1451472346286305882}
+  - component: {fileID: 3463154816780640918}
   m_Layer: 0
-  m_Name: bola8
+  m_Name: maquina_sprite_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &504935148845215362
+--- !u!4 &1216921071847690527
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8450899595116225542}
+  m_GameObject: {fileID: 3208420184015305160}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.99, y: 1.59, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 1.73, y: 0.89, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &8313515088134818363
+--- !u!114 &8646007533753323397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208420184015305160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f034b7721de0741b45618c01df416b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 999
+  damage: 1
+  projectilePrefab: {fileID: 6463370696439883989, guid: ff96b7009f142184797d7315fb25624f, type: 3}
+  detectionRange: 5
+  projectileSpeed: 10
+  fireCooldown: 2
+  firePoint: {fileID: 1216921071847690527}
+  speed: 3
+--- !u!61 &1451472346286305882
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8450899595116225542}
+  m_GameObject: {fileID: 3208420184015305160}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -71,23 +91,23 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.85, y: 3.78}
+    newSize: {x: 3.85, y: 3.78}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.85, y: 3.78}
   m_EdgeRadius: 0
---- !u!50 &9046496603405865497
+--- !u!50 &3463154816780640918
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8450899595116225542}
+  m_GameObject: {fileID: 3208420184015305160}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -95,7 +115,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -107,22 +127,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6840817380785536759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8450899595116225542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3838db1ae8bdf649ba25d72b3e1f05b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 999
-  damage: 1
-  speed: 3
-  chargeSpeed: 6
-  attackRange: 10
-  chargeDuration: 2
-  chargeCooldown: 4
