@@ -48,7 +48,7 @@ public class Level : MonoBehaviour
             HealToFull();
             IncreaseDamage();
             experienceBar.SetLevelText(level);
-            if (level > 2)
+            if (level > 6)
             {
                 GetComponent<PlayerMove>().enabled = false;
                 winPanel.SetActive(true);

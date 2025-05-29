@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bba76a98e4112b04a9dd880bf9b368e0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - upgrade: {instanceID: 0}
+  - icon: {instanceID: 0}
+  - auraDiePrefab: {fileID: 3054553468733890755, guid: 31bce0cfa3fced34ebff584e2e09c1d4, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
