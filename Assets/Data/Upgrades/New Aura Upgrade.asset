@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba76a98e4112b04a9dd880bf9b368e0, type: 3}
+  m_Name: New Aura Upgrade
+  m_EditorClassIdentifier: 
+  upgrade: {fileID: 0}
+  UpgradeType: 3
+  Name: DadoRotatorio
+  icon: {fileID: 21300000, guid: 192c784ed0129734b834f5868196145e, type: 3}
+  auraDiePrefab: {fileID: 3054553468733890755, guid: 31bce0cfa3fced34ebff584e2e09c1d4, type: 3}
+  numberOfDice: 1
+  orbitRadius: 1.5
+  rotationSpeed: 45
