@@ -74,7 +74,7 @@ public class Tragamonedas : MonoBehaviour, IEnemy
         projectile.GetComponent<Rigidbody2D>().linearVelocity = direction * projectileSpeed;
 
         // Destruir despu�s de un tiempo
-        Destroy(projectile, 5f);
+        Destroy(projectile, 2f);
     }
 
     public void TakeDamage(int damageAmount)

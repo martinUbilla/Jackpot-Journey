@@ -16,5 +16,6 @@ public class MonedaProyectil : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else { }
     }
 }
