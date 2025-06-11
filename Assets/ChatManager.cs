@@ -250,6 +250,12 @@ public class ChatManager : MonoBehaviour
     void OnApplicationQuit()
 
     {
+        Disconnect();
+    }
+
+
+    public void Disconnect()
+    {
         if (ws != null && ws.IsAlive)
         {
             ws.Close();
