@@ -12,7 +12,7 @@ public class MonedaProyectil : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.CompareTag("Wall"))
+        else if (collision.CompareTag("Wall"))
         {
             Destroy(gameObject);
         }
