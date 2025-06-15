@@ -9,9 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90102423c8b578649b887d4da1807e92, type: 3}
-  m_Name: TestUpgrade4
+  m_Script: {fileID: 11500000, guid: bd4c2c10ba143be4f93323a2551f42ac, type: 3}
+  m_Name: SlowMovement
   m_EditorClassIdentifier: 
+  upgrade: {fileID: 0}
   UpgradeType: 0
-  Name: test4
+  Name: 
   icon: {fileID: -8010400815871461859, guid: 93cc89052300b7f44ab8e1f46de3ae15, type: 3}
+  currentLevel: 0
+  cooldownDuration: 0
+  cooldownRemaining: 0
+  duration: 5
+  slowFactor: 0.6

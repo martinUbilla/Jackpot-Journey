@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AuraDamage : MonoBehaviour
 {
-    [SerializeField] private int damage = 10;
+    [SerializeField] public int damage = 10;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,5 +14,9 @@ public class AuraDamage : MonoBehaviour
                 enemy.TakeDamage(damage);
             }
         }
+    }
+    public void SetDamage(int nDamage)
+    {
+        damage = nDamage;
     }
 }

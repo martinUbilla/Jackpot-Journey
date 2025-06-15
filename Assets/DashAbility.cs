@@ -16,6 +16,7 @@ public class DashAbility : MonoBehaviour
     private bool isDashing = false;
     private Rigidbody2D rb;
     private Character playerHealth;
+    [SerializeField] private UpgradeData dashUpgradeData;
 
     private void Awake()
     {
@@ -45,6 +46,10 @@ public class DashAbility : MonoBehaviour
 
     private System.Collections.IEnumerator PerformDash(Vector2 direction)
     {
+        if (dashUpgradeData == null)
+            Debug.LogError("?? dashUpgradeData está NULL, no se puede activar cooldown");
+
+        FindFirstObjectByType<Level>().TriggerCooldown(dashUpgradeData);
         isDashing = true;
 
         if (playerHealth != null)
@@ -71,5 +76,20 @@ public class DashAbility : MonoBehaviour
             playerHealth.SetInvulnerable(false);
 
         isDashing = false;
+        
     }
+    public float GetCooldown()
+    {
+        return dashCooldown;
+    }
+
+    public void SetCooldown(float value)
+    {
+        dashCooldown = value;
+    }
+    public void SetUpgradeData(UpgradeData data)
+    {
+        dashUpgradeData = data;
+    }
+
 }

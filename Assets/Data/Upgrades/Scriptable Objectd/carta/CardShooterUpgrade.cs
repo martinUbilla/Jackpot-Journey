@@ -3,8 +3,9 @@ using UnityEngine;
 public class CardShooter : MonoBehaviour
 {
     [SerializeField] private GameObject cardPrefab;
-    [SerializeField] private float shootInterval = 1.5f;
-    [SerializeField] private float cardSpeed = 6f;
+    [SerializeField] public float shootInterval = 1.5f;
+    [SerializeField] public float cardSpeed = 6f;
+    public int cardDamage = 10;
     [SerializeField] private Sprite[] cardSprites;
 
     private void Start()
@@ -31,6 +32,32 @@ public class CardShooter : MonoBehaviour
             {
                 sr.sprite = cardSprites[Random.Range(0, cardSprites.Length)];
             }
+            CardProjectile projectile = card.GetComponent<CardProjectile>();
+            if (projectile != null)
+            {
+                projectile.SetDamage(Mathf.RoundToInt(cardDamage));
+            }
         }
     }
+    public float GetInterval()
+    {
+        return shootInterval;
+    }
+
+    public void SetInterval(float value)
+    {
+        shootInterval = value;
+
+        // Reset el intervalo si ya se estaba invocando
+        CancelInvoke(nameof(ShootCards));
+        InvokeRepeating(nameof(ShootCards), 0f, shootInterval);
+    }
+
+    public void SetProjectileDamage(int damage)
+    {
+        cardDamage = damage;
+    }
+
+
+
 }

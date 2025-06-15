@@ -20,7 +20,11 @@ public class CardProjectile : MonoBehaviour
                 enemy.TakeDamage(damage);
             }
 
-            Destroy(gameObject);
+            
         }
+    }
+    public void SetDamage(int newDamage)
+    {
+        damage = newDamage;
     }
 }

@@ -11,7 +11,7 @@ public class PlayerMove : MonoBehaviour
     public float lastHorizontalVector;
     [HideInInspector]
     public float lastVerticalVector;
-    [SerializeField] float speed = 3f;
+    [SerializeField] public float speed = 3f;
     Animate animate; 
     private void Awake()
     {

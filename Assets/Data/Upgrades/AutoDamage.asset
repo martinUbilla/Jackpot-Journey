@@ -9,9 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90102423c8b578649b887d4da1807e92, type: 3}
-  m_Name: TestUpgrade3
+  m_Script: {fileID: 11500000, guid: cd33f5dbfc610244b858ce600fe333da, type: 3}
+  m_Name: AutoDamage
   m_EditorClassIdentifier: 
+  upgrade: {fileID: 0}
   UpgradeType: 0
-  Name: test3
-  icon: {fileID: 6148173280092240427, guid: fa76a0d3df8662d439297ac1a9a7af30, type: 3}
+  Name: 
+  icon: {fileID: 7675826601332790545, guid: d13ad60000376e149a2becd2e7471396, type: 3}
+  currentLevel: 0
+  cooldownDuration: 0
+  cooldownRemaining: 0
+  damage: 30
