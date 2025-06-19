@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ab8081e0b268249aee06ae9fe2fec8, type: 3}
+  m_Name: FirstBoss Data
+  m_EditorClassIdentifier: 
+  Name: FirstBoss
+  enemyPrefab: {fileID: 5797863514307324308, guid: 5018103df176ce044ac36208c2ee309b, type: 3}
+  animatedPrefab: {fileID: 1526571501876861298, guid: 7b4f6c0a98833a846b32c9ea737419d4, type: 3}
