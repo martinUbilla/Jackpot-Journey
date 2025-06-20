@@ -15,4 +15,10 @@ MonoBehaviour:
   upgrade: {fileID: 0}
   UpgradeType: 0
   Name: Dash
-  icon: {fileID: 4506540388319388062, guid: 5a17dd873087f8041be5e4ad7b04e9c7, type: 3}
+  icon: {fileID: 7110878671101974141, guid: dec6c9365931b774cbf172e3a63f4894, type: 3}
+  currentLevel: 0
+  cooldownDuration: 1.5999999
+  cooldownRemaining: 0
+  cooldownReductionPerLevel: 0.2
+  minCooldown: 0.5
+  dashCooldown: 2

@@ -16,6 +16,18 @@ MonoBehaviour:
   - eventType: 0
     time: 5
     message: 
+    enemyToSpawn: {fileID: 11400000, guid: bb7bae8bf836acc4186c4697eddc3955, type: 2}
+    objectToSpawn: {fileID: 0}
+    count: 4
+  - eventType: 0
+    time: 25
+    message: 
+    enemyToSpawn: {fileID: 11400000, guid: bb7bae8bf836acc4186c4697eddc3955, type: 2}
+    objectToSpawn: {fileID: 0}
+    count: 6
+  - eventType: 0
+    time: 60
+    message: 
     enemyToSpawn: {fileID: 11400000, guid: a01a948517f501b458a9cdf6e68f1070, type: 2}
     objectToSpawn: {fileID: 0}
     count: 1

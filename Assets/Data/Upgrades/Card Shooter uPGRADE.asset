@@ -15,4 +15,7 @@ MonoBehaviour:
   upgrade: {fileID: 7520956117608121446, guid: 0ae50d896aa863b429e886f72ccf0ee4, type: 3}
   UpgradeType: 3
   Name: Carta cortante
-  icon: {fileID: -7401315968094574992, guid: b540109be7036ef438c2da75c8478a02, type: 3}
+  icon: {fileID: 5990415780787779188, guid: 1e6b2dc07615a6e43a434f8e6d16d2e1, type: 3}
+  currentLevel: 2
+  cooldownDuration: 0
+  cooldownRemaining: 0

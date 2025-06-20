@@ -15,7 +15,7 @@ MonoBehaviour:
   upgrade: {fileID: 0}
   UpgradeType: 0
   Name: 
-  icon: {fileID: 6148173280092240427, guid: fa76a0d3df8662d439297ac1a9a7af30, type: 3}
+  icon: {fileID: 4859045227529045888, guid: 589384e63cb7ead489116e631199ff3e, type: 3}
   currentLevel: 0
   cooldownDuration: 0
   cooldownRemaining: 0
