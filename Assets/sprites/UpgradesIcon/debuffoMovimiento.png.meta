@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      debuffoMovimiento_0: 1363242104879333270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
