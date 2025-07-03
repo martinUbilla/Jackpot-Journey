@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6840817380785536759}
   m_Layer: 0
   m_Name: bola8
-  m_TagString: Untagged
+  m_TagString: Bola8
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

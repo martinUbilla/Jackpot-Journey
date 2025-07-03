@@ -12,6 +12,8 @@ public class EnemyBola8 : MonoBehaviour, IEnemy
     [SerializeField] float chargeDuration = 1f;
     [SerializeField] float chargeCooldown = 2f;
 
+    [SerializeField] private AudioClip attackSound;
+
     Character targetCharacter;
     GameObject targetGameObject;
     private Rigidbody2D rb;
@@ -80,7 +82,7 @@ public class EnemyBola8 : MonoBehaviour, IEnemy
     {
         chargeTime -= Time.fixedDeltaTime;
         rb.linearVelocity = chargeDirection * chargeSpeed;
-
+        SoundManager.Instance.PlaySound(attackSound);
         if (chargeTime <= 0)
         {
             isCharging = false;

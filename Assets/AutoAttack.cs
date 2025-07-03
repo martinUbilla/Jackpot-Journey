@@ -11,6 +11,7 @@ public class AutoAttack : MonoBehaviour
     [SerializeField] private LayerMask enemyLayer;        // Capa de enemigos
     [SerializeField] GameObject spriteWhipLeft;
     [SerializeField] GameObject spriteWhipRight;
+    [SerializeField] private AudioClip attackSound;
     private float nextAttackTime = 0f;
     PlayerMove playerMove;
     private void Awake()
@@ -42,12 +43,14 @@ public class AutoAttack : MonoBehaviour
                 if (playerMove.lastHorizontalVector > 0)
                 {
                     spriteWhipRight.SetActive(true);
+                    SoundManager.Instance.PlaySound(attackSound);
                
                 }
                 else
                 {
                     spriteWhipLeft.SetActive(true);
-                
+                    SoundManager.Instance.PlaySound(attackSound);
+
                 }
                 // Obtener el componente de salud del enemigo y aplicar daño
                 IEnemy enemyHealth = enemy.GetComponent<IEnemy>();
