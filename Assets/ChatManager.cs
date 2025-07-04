@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 using WebSocketSharp;
 using TMPro;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 #region Modelos
 
@@ -76,6 +77,12 @@ public class MatchReadyData { public string matchId; }
 [System.Serializable]
 public class MatchStartMessage { public string eventName; public string msg; public MatchReadyData data; }
 
+[System.Serializable]
+public class PrivateMessageRequest { public string @event = "send-private-message"; public PrivateMessageData data; }
+
+[System.Serializable]
+public class PrivateMessageData { public string playerId; public string message; }
+
 #endregion
 
 public class ChatManager : MonoBehaviour
@@ -109,25 +116,25 @@ public class ChatManager : MonoBehaviour
     private string selectedPlayerId = "";
     private string selectedPlayerName = "";
     private string pendingMatchId = "";
+    private bool enviarPrivado = false;
 
     void Start()
     {
         if (FindFirstObjectByType<UnityMainThreadDispatcher>() == null)
             gameObject.AddComponent<UnityMainThreadDispatcher>();
 
-        ws = new WebSocket("ws://ucn-game-server.martux.cl:4010/?gameId=F&playerName=ElNochi2");
+        ws = new WebSocket("ws://ucn-game-server.martux.cl:4010/?gameId=F&playerName=ElNochi");
 
         ws.OnOpen += OnWebSocketOpen;
         ws.OnMessage += OnWebSocketMessage;
         ws.Connect();
 
-        messageInput.onSubmit.AddListener(SendChatMessage);
+        messageInput.onSubmit.AddListener(OnSubmitMessage);
 
         contextMenuPanel.SetActive(false);
         roomButton.gameObject.SetActive(false);
 
-        roomButton.onClick.AddListener(ConectarAPartida); // ✅ ASIGNAR EVENTO AQUÍ
-
+        roomButton.onClick.AddListener(ConectarAPartida);
         pingButton.onClick.AddListener(EnviarPingMatch);
         pingButton.gameObject.SetActive(false);
 
@@ -139,8 +146,9 @@ public class ChatManager : MonoBehaviour
 
         privateMsgButton.onClick.AddListener(() =>
         {
-            chatText.text += $"\n[Mensaje privado a {selectedPlayerName}] (pendiente)";
+            enviarPrivado = true;
             contextMenuPanel.SetActive(false);
+            messageInput.ActivateInputField();
         });
     }
 
@@ -252,7 +260,7 @@ public class ChatManager : MonoBehaviour
                 {
                     if (serverMessage.data.id != myId)
                     {
-                        chatText.text += $"\n[+] {serverMessage.data.name} se ha conectado";
+                        chatText.text += $"\n [+] {serverMessage.data.name} se ha conectado";
                         PedirJugadoresConectados();
                     }
                 }
@@ -260,18 +268,33 @@ public class ChatManager : MonoBehaviour
                 {
                     if (serverMessage.data.id != myId)
                     {
-                        chatText.text += $"\n[-] {serverMessage.data.name} se ha desconectado";
+                        chatText.text += $"\n [-] {serverMessage.data.name} se ha desconectado";
                         PedirJugadoresConectados();
                     }
                 }
-                else if (json.Contains("public-message"))
+                else if (serverMessage.eventName == "public-message")
                 {
                     PublicMessage mensajePublico = JsonUtility.FromJson<PublicMessage>(json);
-                    if (mensajePublico.data.playerId != myId)
+
+                    // Evitar duplicado si es un eco del mismo jugador
+                    if (mensajePublico.data != null && mensajePublico.data.playerId != myId)
                     {
-                        chatText.text += $"\n{mensajePublico.data.playerName}: {mensajePublico.data.playerMsg}";
+                        chatText.text += $"\n {mensajePublico.data.playerName}: {mensajePublico.data.playerMsg}";
+                        ActualizarChatUI();
                     }
+
+                    return;
                 }
+
+
+                else if (serverMessage.eventName == "private-message")
+                {
+                    PublicMessage privado = JsonUtility.FromJson<PublicMessage>(json);
+                    chatText.text += $"\n {privado.data.playerName} [Mensaje Privado]: {privado.data.playerMsg}";
+                    ActualizarChatUI();
+                    return;
+                }
+
                 else if (serverMessage.eventName == "match-accepted")
                 {
                     string playerName = ExtraerNombreDesdeMensaje(serverMessage.msg);
@@ -379,6 +402,42 @@ public class ChatManager : MonoBehaviour
         chatText.text += $"\n Invitación enviada a {playerName}";
 
         ActualizarChatUI();
+    }
+
+    private void OnSubmitMessage(string msg)
+    {
+        if (enviarPrivado)
+        {
+            EnviarMensajePrivado(msg);
+            enviarPrivado = false;
+        }
+        else
+        {
+            SendChatMessage(msg);
+        }
+    }
+
+    public void EnviarMensajePrivado(string mensaje)
+    {
+        if (string.IsNullOrEmpty(mensaje) || string.IsNullOrEmpty(selectedPlayerId))
+        {
+            Debug.LogWarning("No se puede enviar mensaje privado vacío o sin destinatario.");
+            return;
+        }
+
+        var privateMsg = new PrivateMessageRequest
+        {
+            data = new PrivateMessageData
+            {
+                playerId = selectedPlayerId,
+                message = mensaje
+            }
+        };
+
+        ws.Send(JsonUtility.ToJson(privateMsg));
+        chatText.text += $"\n Tú a {selectedPlayerName}: {mensaje}";
+        ActualizarChatUI();
+        messageInput.text = "";
     }
 
     public void AceptarPartida()
