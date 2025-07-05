@@ -121,8 +121,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 999
   damage: 1
-  speed: 3
-  chargeSpeed: 6
-  attackRange: 10
-  chargeDuration: 2
-  chargeCooldown: 4
+  speed: 1.5
+  chargeSpeed: 4
+  attackRange: 7
+  chargeDuration: 1
+  chargeCooldown: 3
+  attackSound: {fileID: 8300000, guid: b3e35ee538adc2e4190e37d6307a229f, type: 3}
+  exp: 1000

@@ -7,7 +7,7 @@ public class DashUpgrade : UpgradeData
     [SerializeField] private float cooldownReductionPerLevel = 0.2f;
     [SerializeField] private float minCooldown = 0.5f;
     [SerializeField] private float dashCooldown = 2f;
-  
+    [SerializeField] private AudioClip dashSound;
     public override void Apply(GameObject player)
     {
         currentLevel++;
@@ -16,6 +16,7 @@ public class DashUpgrade : UpgradeData
         if (dash == null)
         {
             dash = player.AddComponent<DashAbility>();
+
         }
 
         // Incrementar nivel (si estás usando currentLevel en UpgradeData)
@@ -29,6 +30,7 @@ public class DashUpgrade : UpgradeData
         cooldownDuration = newCooldown;
         FindFirstObjectByType<Level>().RefreshCooldownUI(this);
         dash.SetUpgradeData(this);
+        
 
         Debug.Log($"[DashUpgrade] Nivel: {currentLevel}, Nuevo cooldown: {newCooldown}");
     }

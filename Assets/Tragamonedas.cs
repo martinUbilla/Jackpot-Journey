@@ -15,7 +15,7 @@ public class Tragamonedas : MonoBehaviour, IEnemy
     [SerializeField] float fireCooldown = 2f;
     [SerializeField] Transform firePoint;
     [SerializeField] float speed = 3f;
-
+    [SerializeField] int exp;
     private float nextFireTime;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -82,6 +82,7 @@ public class Tragamonedas : MonoBehaviour, IEnemy
         hp -= damageAmount;
         if (hp < 1)
         {
+            targetGameObject.GetComponent<Level>().addExperience(exp);
             Destroy(gameObject);
         }
     }

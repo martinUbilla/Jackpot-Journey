@@ -4643,14 +4643,9 @@ MonoBehaviour:
   upgradePanel: {fileID: 636090869}
   upgrades:
   - {fileID: 11400000, guid: 2f10382a8b34e8f42aa8ba96b1093ae5, type: 2}
-  - {fileID: 11400000, guid: aa11b6b52b2e5584a80964219f446c19, type: 2}
-  - {fileID: 11400000, guid: f46d96441906c50459b40d5dde5d3e98, type: 2}
   selectedUpgrades: []
   acquiredUpgrades: []
-  downgrades:
-  - {fileID: 11400000, guid: 181c8d2ec5ccf5443a1242b70ee09eea, type: 2}
-  - {fileID: 11400000, guid: c2251ecfd20b8264eb3208351615db60, type: 2}
-  - {fileID: 11400000, guid: aa7a23f9a216e1e41bc0ada53fba8679, type: 2}
+  downgrades: []
   upgradeUIContainer: {fileID: 1001746869}
   upgradeIconPrefab: {fileID: 8743948898159360160, guid: 94ecf05318a022042b33f7bf683c34fa, type: 3}
 --- !u!114 &1177535528

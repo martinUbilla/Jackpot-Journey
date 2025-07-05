@@ -13,7 +13,7 @@ public class EnemyBola8 : MonoBehaviour, IEnemy
     [SerializeField] float chargeCooldown = 2f;
 
     [SerializeField] private AudioClip attackSound;
-
+    [SerializeField] int exp;
     Character targetCharacter;
     GameObject targetGameObject;
     private Rigidbody2D rb;
@@ -113,6 +113,7 @@ public class EnemyBola8 : MonoBehaviour, IEnemy
         hp -= damage;
         if (hp < 1)
         {
+            targetGameObject.GetComponent<Level>().addExperience(exp);
             Destroy(gameObject);
         }
     }

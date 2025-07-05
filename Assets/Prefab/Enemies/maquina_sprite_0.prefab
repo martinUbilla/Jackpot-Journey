@@ -54,6 +54,7 @@ MonoBehaviour:
   fireCooldown: 2
   firePoint: {fileID: 1216921071847690527}
   speed: 3
+  exp: 1000
 --- !u!61 &1451472346286305882
 BoxCollider2D:
   m_ObjectHideFlags: 0

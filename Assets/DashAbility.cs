@@ -11,7 +11,7 @@ public class DashAbility : MonoBehaviour
     [Header("Damage Settings (opcional)")]
     [SerializeField] private int dashDamage = 20;
     [SerializeField] private LayerMask enemyLayer;
-
+    [SerializeField] private AudioClip dashSound;
     private float lastDashTime;
     private bool isDashing = false;
     private Rigidbody2D rb;
@@ -51,7 +51,7 @@ public class DashAbility : MonoBehaviour
 
         FindFirstObjectByType<Level>().TriggerCooldown(dashUpgradeData);
         isDashing = true;
-
+        SoundManager.Instance.PlaySound(dashSound);
         if (playerHealth != null)
             playerHealth.SetInvulnerable(true);
 
