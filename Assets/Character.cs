@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.Processors;
 
@@ -51,6 +52,14 @@ public class Character : MonoBehaviour
     public void SetInvulnerable(bool invul)
     {
         invulnerable = invul;
+    }
+    public void IncreaseHealth(int amount)
+    {
+        maxHp += amount;
+    }
+    public bool SpendCoins(int amount)
+    {
+        return coins.Spend(amount);
     }
 }
 

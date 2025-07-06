@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class AutoAttack : MonoBehaviour
@@ -76,4 +78,17 @@ public class AutoAttack : MonoBehaviour
         damage += amount;
     }
 
+    public void subirCDAtaque(float amount)
+    {
+        attackCooldown += amount;
+    }
+
+    public void bajarCDAtaque(float amount)
+    {
+        attackCooldown -= amount;
+    }
+    public float getCd()
+    {
+        return attackCooldown;
+    }
 }
