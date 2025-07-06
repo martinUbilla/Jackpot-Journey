@@ -19,6 +19,8 @@ public class Tragamonedas : MonoBehaviour, IEnemy
     private float nextFireTime;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    [SerializeField] GameObject coinPrefab;
+    [SerializeField] float dropOffset = 0.5f;
 
     private void Awake()
     {
@@ -83,6 +85,7 @@ public class Tragamonedas : MonoBehaviour, IEnemy
         if (hp < 1)
         {
             targetGameObject.GetComponent<Level>().addExperience(exp);
+            DropItem();
             Destroy(gameObject);
         }
     }
@@ -102,5 +105,15 @@ public class Tragamonedas : MonoBehaviour, IEnemy
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
+    }
+    private void DropItem()
+    {
+        // Genera el objeto en la posición del jefe con un pequeño desplazamiento
+        Vector3 dropPosition = transform.position + new Vector3(Random.Range(-dropOffset, dropOffset), Random.Range(-dropOffset, dropOffset), 0);
+        // Dropea una moneda
+        Instantiate(coinPrefab, dropPosition, Quaternion.identity);
+        Debug.Log("¡Droppé una moneda!");
+
+
     }
 }

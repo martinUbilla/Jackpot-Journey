@@ -55,6 +55,8 @@ MonoBehaviour:
   firePoint: {fileID: 1216921071847690527}
   speed: 3
   exp: 1000
+  coinPrefab: {fileID: 1328010146122572623, guid: a6d518240142f0748bdb65eaa5fe624d, type: 3}
+  dropOffset: 0.5
 --- !u!61 &1451472346286305882
 BoxCollider2D:
   m_ObjectHideFlags: 0
