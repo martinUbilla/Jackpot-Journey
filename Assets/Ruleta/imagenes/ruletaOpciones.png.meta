@@ -1,0 +1,472 @@
+fileFormatVersion: 2
+guid: 2c4ec72896852c543aef5e06acd04144
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2942333802768769809
+    second: ruletaOpciones_0
+  - first:
+      213: 2717076530894284415
+    second: ruletaOpciones_1
+  - first:
+      213: -2789498536029282673
+    second: ruletaOpciones_2
+  - first:
+      213: -7443862218510882109
+    second: ruletaOpciones_3
+  - first:
+      213: -685713059441955365
+    second: ruletaOpciones_4
+  - first:
+      213: 1873553364042704420
+    second: ruletaOpciones_5
+  - first:
+      213: 5807005479163968495
+    second: ruletaOpciones_6
+  - first:
+      213: 7884029013530969273
+    second: ruletaOpciones_7
+  - first:
+      213: 4889638107217042427
+    second: ruletaOpciones_8
+  - first:
+      213: 3597068663175255545
+    second: ruletaOpciones_9
+  - first:
+      213: -6033109787797100474
+    second: ruletaOpciones_10
+  - first:
+      213: -1298341618535544126
+    second: ruletaOpciones_11
+  - first:
+      213: -3987476374060852949
+    second: ruletaOpciones_12
+  - first:
+      213: 2010132020398426490
+    second: ruletaOpciones_13
+  - first:
+      213: -1819453219335472066
+    second: ruletaOpciones_14
+  - first:
+      213: -197178800960362507
+    second: ruletaOpciones_15
+  - first:
+      213: 5964127935122476682
+    second: ruletaOpciones_16
+  - first:
+      213: -6310738898109025361
+    second: ruletaOpciones_17
+  - first:
+      213: -3609459662505843270
+    second: ruletaOpciones_18
+  - first:
+      213: -7737982421879436448
+    second: ruletaOpciones_19
+  - first:
+      213: -5796331429033160338
+    second: ruletaOpciones_20
+  - first:
+      213: 1997123332238234129
+    second: ruletaOpciones_21
+  - first:
+      213: -5635654438896097033
+    second: ruletaOpciones_22
+  - first:
+      213: 2521838178575070770
+    second: ruletaOpciones_23
+  - first:
+      213: 9021147445918407866
+    second: ruletaOpciones_24
+  - first:
+      213: 8752914842698293288
+    second: ruletaOpciones_25
+  - first:
+      213: -2301090970283180884
+    second: ruletaOpciones_26
+  - first:
+      213: -3815564368890211045
+    second: ruletaOpciones_27
+  - first:
+      213: 5612063357400515130
+    second: ruletaOpciones_28
+  - first:
+      213: 7956159980274155018
+    second: ruletaOpciones_29
+  - first:
+      213: -6735948713253147750
+    second: ruletaOpciones_30
+  - first:
+      213: -8188165130868215679
+    second: ruletaOpciones_31
+  - first:
+      213: -4507069242386595058
+    second: ruletaOpciones_32
+  - first:
+      213: 6703265223992975937
+    second: ruletaOpciones_33
+  - first:
+      213: 6240670407168710745
+    second: ruletaOpciones_34
+  - first:
+      213: -92359277997024988
+    second: ruletaOpciones_35
+  - first:
+      213: -2644972960988895349
+    second: ruletaOpciones_36
+  - first:
+      213: -7531154245619151609
+    second: ruletaOpciones_37
+  - first:
+      213: 5205033444136340029
+    second: ruletaOpciones_38
+  - first:
+      213: -4097841451693792027
+    second: ruletaOpciones_39
+  - first:
+      213: 7860718143300198183
+    second: ruletaOpciones_40
+  - first:
+      213: -5697004604044293375
+    second: ruletaOpciones_41
+  - first:
+      213: 8473230963803522986
+    second: ruletaOpciones_42
+  - first:
+      213: -3593938156676723243
+    second: ruletaOpciones_43
+  - first:
+      213: -9136380961027937590
+    second: ruletaOpciones_44
+  - first:
+      213: -484375114149307980
+    second: ruletaOpciones_45
+  - first:
+      213: 8497866093293934502
+    second: ruletaOpciones_46
+  - first:
+      213: 5198535714464946406
+    second: ruletaOpciones_47
+  - first:
+      213: 7587148544824389749
+    second: ruletaOpciones_48
+  - first:
+      213: -8139565984592237038
+    second: ruletaOpciones_49
+  - first:
+      213: -9134963044963338205
+    second: ruletaOpciones_50
+  - first:
+      213: 8900855480734580373
+    second: ruletaOpciones_51
+  - first:
+      213: -468071192066041512
+    second: ruletaOpciones_52
+  - first:
+      213: 6406731315723704923
+    second: ruletaOpciones_53
+  - first:
+      213: -4615776143810533768
+    second: ruletaOpciones_54
+  - first:
+      213: -2102436548049410816
+    second: ruletaOpciones_55
+  - first:
+      213: -4296049707433585225
+    second: ruletaOpciones_56
+  - first:
+      213: -8649611392140984364
+    second: ruletaOpciones_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ruletaOpciones_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 382
+        width: 238
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fecd75bdefaba27d0800000000000000
+      internalID: -2942333802768769809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ruletaOpciones_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 373
+        width: 286
+        height: 268
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2917d54d53a9a8c0800000000000000
+      internalID: -3987476374060852949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ruletaOpciones_15
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 389
+        width: 268
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f7258bdcea734df0800000000000000
+      internalID: -197178800960362507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ruletaOpciones_16
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 367
+        width: 187
+        height: 272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e85f7f1c6d4c250800000000000000
+      internalID: 5964127935122476682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ruletaOpciones_57
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 391
+        width: 230
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dfb346344866f780800000000000000
+      internalID: -8649611392140984364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 83931ea9516724a4795c267ef2d7f792
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ruletaOpciones_0: -2942333802768769809
+      ruletaOpciones_1: 2717076530894284415
+      ruletaOpciones_10: -6033109787797100474
+      ruletaOpciones_11: -1298341618535544126
+      ruletaOpciones_12: -3987476374060852949
+      ruletaOpciones_13: 2010132020398426490
+      ruletaOpciones_14: -1819453219335472066
+      ruletaOpciones_15: -197178800960362507
+      ruletaOpciones_16: 5964127935122476682
+      ruletaOpciones_17: -6310738898109025361
+      ruletaOpciones_18: -3609459662505843270
+      ruletaOpciones_19: -7737982421879436448
+      ruletaOpciones_2: -2789498536029282673
+      ruletaOpciones_20: -5796331429033160338
+      ruletaOpciones_21: 1997123332238234129
+      ruletaOpciones_22: -5635654438896097033
+      ruletaOpciones_23: 2521838178575070770
+      ruletaOpciones_24: 9021147445918407866
+      ruletaOpciones_25: 8752914842698293288
+      ruletaOpciones_26: -2301090970283180884
+      ruletaOpciones_27: -3815564368890211045
+      ruletaOpciones_28: 5612063357400515130
+      ruletaOpciones_29: 7956159980274155018
+      ruletaOpciones_3: -7443862218510882109
+      ruletaOpciones_30: -6735948713253147750
+      ruletaOpciones_31: -8188165130868215679
+      ruletaOpciones_32: -4507069242386595058
+      ruletaOpciones_33: 6703265223992975937
+      ruletaOpciones_34: 6240670407168710745
+      ruletaOpciones_35: -92359277997024988
+      ruletaOpciones_36: -2644972960988895349
+      ruletaOpciones_37: -7531154245619151609
+      ruletaOpciones_38: 5205033444136340029
+      ruletaOpciones_39: -4097841451693792027
+      ruletaOpciones_4: -685713059441955365
+      ruletaOpciones_40: 7860718143300198183
+      ruletaOpciones_41: -5697004604044293375
+      ruletaOpciones_42: 8473230963803522986
+      ruletaOpciones_43: -3593938156676723243
+      ruletaOpciones_44: -9136380961027937590
+      ruletaOpciones_45: -484375114149307980
+      ruletaOpciones_46: 8497866093293934502
+      ruletaOpciones_47: 5198535714464946406
+      ruletaOpciones_48: 7587148544824389749
+      ruletaOpciones_49: -8139565984592237038
+      ruletaOpciones_5: 1873553364042704420
+      ruletaOpciones_50: -9134963044963338205
+      ruletaOpciones_51: 8900855480734580373
+      ruletaOpciones_52: -468071192066041512
+      ruletaOpciones_53: 6406731315723704923
+      ruletaOpciones_54: -4615776143810533768
+      ruletaOpciones_55: -2102436548049410816
+      ruletaOpciones_56: -4296049707433585225
+      ruletaOpciones_57: -8649611392140984364
+      ruletaOpciones_6: 5807005479163968495
+      ruletaOpciones_7: 7884029013530969273
+      ruletaOpciones_8: 4889638107217042427
+      ruletaOpciones_9: 3597068663175255545
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

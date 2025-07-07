@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: 26cf766581593e1428951cf36bf93154
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - dashSound: {fileID: 8300000, guid: 9a3548007e9a7a040afae21445648e29, type: 3}
+  - dashUpgradeData: {fileID: 11400000, guid: f46d96441906c50459b40d5dde5d3e98, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

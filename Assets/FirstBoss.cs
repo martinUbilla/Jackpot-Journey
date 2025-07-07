@@ -19,6 +19,8 @@ public class BossEnemy : MonoBehaviour, IEnemy
     Transform targetDestination;
     GameObject targetGameObject;
     Character targetCharacter;
+    [SerializeField] GameObject coinPrefab;
+    [SerializeField] float dropOffset = 0.5f;
 
     private enum BossAttackState { Rayo, Explosion, Melee }
     private BossAttackState currentState = BossAttackState.Rayo;
@@ -121,7 +123,11 @@ public class BossEnemy : MonoBehaviour, IEnemy
                     level.addExperience(experienceReward);
                 }
             }
+<<<<<<< HEAD
             ScoreManager.Instance.AddScore(300);
+=======
+            DropItem();
+>>>>>>> 740115359160450cc0966d28388db3343e965448
             Destroy(gameObject);
         }
     }
@@ -146,5 +152,15 @@ public class BossEnemy : MonoBehaviour, IEnemy
         Gizmos.DrawWireSphere(transform.position, explosionRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, meleeRange);
+    }
+    private void DropItem()
+    {
+        // Genera el objeto en la posición del jefe con un pequeño desplazamiento
+        Vector3 dropPosition = transform.position + new Vector3(Random.Range(-dropOffset, dropOffset), Random.Range(-dropOffset, dropOffset), 0);
+            // Dropea una moneda
+            Instantiate(coinPrefab, dropPosition, Quaternion.identity);
+            Debug.Log("¡Droppé una moneda!");
+        
+        
     }
 }

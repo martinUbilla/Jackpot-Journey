@@ -13,11 +13,13 @@ public class EnemyBola8 : MonoBehaviour, IEnemy
     [SerializeField] float chargeCooldown = 2f;
 
     [SerializeField] private AudioClip attackSound;
-
+    [SerializeField] int exp;
     Character targetCharacter;
     GameObject targetGameObject;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    [SerializeField] GameObject coinPrefab;
+    [SerializeField] float dropOffset = 0.5f;
 
     private Vector2 chargeDirection;
     private float chargeTime;
@@ -113,9 +115,24 @@ public class EnemyBola8 : MonoBehaviour, IEnemy
         hp -= damage;
         if (hp < 1)
         {
+<<<<<<< HEAD
             ScoreManager.Instance.AddScore(100); // Añadir puntaje al morir
+=======
+            targetGameObject.GetComponent<Level>().addExperience(exp);
+            DropItem();
+>>>>>>> 740115359160450cc0966d28388db3343e965448
             Destroy(gameObject);
         }
+    }
+    private void DropItem()
+    {
+        // Genera el objeto en la posición del jefe con un pequeño desplazamiento
+        Vector3 dropPosition = transform.position + new Vector3(Random.Range(-dropOffset, dropOffset), Random.Range(-dropOffset, dropOffset), 0);
+        // Dropea una moneda
+        Instantiate(coinPrefab, dropPosition, Quaternion.identity);
+        Debug.Log("¡Droppé una moneda!");
+
+
     }
 }
 
