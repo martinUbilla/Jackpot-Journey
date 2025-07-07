@@ -1,4 +1,3 @@
-using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,6 +12,8 @@ public class EnemyCard0 : MonoBehaviour, IEnemy
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     [SerializeField] int experience_reward = 400;
+    [SerializeField] GameObject coinPrefab;
+    [SerializeField] float dropOffset = 0.5f;
 
 
     private void Awake()
@@ -67,8 +68,19 @@ public class EnemyCard0 : MonoBehaviour, IEnemy
         if (hp < 1)
         {
             targetGameObject.GetComponent<Level>().addExperience(experience_reward);
+            DropItem();
             Destroy(gameObject);
 
         }
+    }
+    private void DropItem()
+    {
+        // Genera el objeto en la posición del jefe con un pequeño desplazamiento
+        Vector3 dropPosition = transform.position + new Vector3(Random.Range(-dropOffset, dropOffset), Random.Range(-dropOffset, dropOffset), 0);
+        // Dropea una moneda
+        Instantiate(coinPrefab, dropPosition, Quaternion.identity);
+        Debug.Log("¡Droppé una moneda!");
+
+
     }
 }
