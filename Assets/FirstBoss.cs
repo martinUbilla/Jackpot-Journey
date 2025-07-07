@@ -123,12 +123,10 @@ public class BossEnemy : MonoBehaviour, IEnemy
                     level.addExperience(experienceReward);
                 }
             }
-<<<<<<< HEAD
             ScoreManager.Instance.AddScore(300);
-=======
             DropItem();
->>>>>>> 740115359160450cc0966d28388db3343e965448
             Destroy(gameObject);
+
         }
     }
 
