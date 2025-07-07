@@ -67,6 +67,7 @@ public class EnemyCard0 : MonoBehaviour, IEnemy
         if (hp < 1)
         {
             targetGameObject.GetComponent<Level>().addExperience(experience_reward);
+            ScoreManager.Instance.AddScore(100); // Añadir puntaje al morir
             Destroy(gameObject);
 
         }

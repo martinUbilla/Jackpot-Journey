@@ -5,6 +5,9 @@ using WebSocketSharp;
 using TMPro;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using UnityEngine.SceneManagement;
+using System.Collections;
+
 
 #region Modelos
 
@@ -85,8 +88,12 @@ public class PrivateMessageData { public string playerId; public string message;
 
 #endregion
 
+
+
 public class ChatManager : MonoBehaviour
 {
+    public static ChatManager Instance { get; private set; }
+
     [Header("UI References")]
     public Transform UserListContainer;
     public GameObject UserEntryPrefab;
@@ -105,6 +112,9 @@ public class ChatManager : MonoBehaviour
     public Button acceptMatchButton;
     public Button rejectMatchButton;
 
+    [Header("Match Rematch Button")]
+    public Button botonRevancha;
+
     [Header("Match Connect Panel")]
     public Button roomButton;
     public Button pingButton;
@@ -117,27 +127,65 @@ public class ChatManager : MonoBehaviour
     private string selectedPlayerName = "";
     private string pendingMatchId = "";
     private bool enviarPrivado = false;
+    private bool yaJugamosUnaPartida = false;
+
+
+
+
+
+
+    [SerializeField] private SlowMovementUpgrade slowDebuffSO;
+    [SerializeField] private AutoDamageUpgrade autoDamageDebuffSO;
+    [SerializeField] private DowngradeSkillUpgrade downgradeSkillDebuffSO;
+    [SerializeField] private PlayerLose playerLose;
+
+
+    private GameObject player; // referencia al jugador
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
         if (FindFirstObjectByType<UnityMainThreadDispatcher>() == null)
             gameObject.AddComponent<UnityMainThreadDispatcher>();
 
+        // Conexión WebSocket
         ws = new WebSocket("ws://ucn-game-server.martux.cl:4010/?gameId=F&playerName=ElNochi");
-
         ws.OnOpen += OnWebSocketOpen;
         ws.OnMessage += OnWebSocketMessage;
         ws.Connect();
 
-        messageInput.onSubmit.AddListener(OnSubmitMessage);
-
+        // Ocultar elementos al inicio
         contextMenuPanel.SetActive(false);
         roomButton.gameObject.SetActive(false);
+        pingButton.gameObject.SetActive(false);
+        botonRevancha.gameObject.SetActive(false);
 
+
+        // Listener del input
+        if (messageInput != null)
+            messageInput.onSubmit.AddListener(OnSubmitMessage);
+
+        // Listener del botón de revancha
+        botonRevancha.onClick.RemoveAllListeners();
+        botonRevancha.onClick.AddListener(EnviarSolicitudRematch);
+
+        // Botones conexión y ping
         roomButton.onClick.AddListener(ConectarAPartida);
         pingButton.onClick.AddListener(EnviarPingMatch);
-        pingButton.gameObject.SetActive(false);
 
+        // Menú contextual
         inviteButton.onClick.AddListener(() =>
         {
             EnviarSolicitudPartida(selectedPlayerId, selectedPlayerName);
@@ -148,13 +196,46 @@ public class ChatManager : MonoBehaviour
         {
             enviarPrivado = true;
             contextMenuPanel.SetActive(false);
-            messageInput.ActivateInputField();
+            messageInput?.ActivateInputField();
         });
+
+        // Popup de solicitud de partida
+        acceptMatchButton.onClick.RemoveAllListeners();
+        acceptMatchButton.onClick.AddListener(() =>
+        {
+            AceptarPartida();
+            matchRequestPopup.SetActive(false);
+            roomButton.gameObject.SetActive(true);
+        });
+
+        rejectMatchButton.onClick.RemoveAllListeners();
+        rejectMatchButton.onClick.AddListener(() =>
+        {
+            RechazarPartida();
+            matchRequestPopup.SetActive(false);
+        });
+
+
+
+        // Jugador
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+            Debug.LogWarning("No se encontró el objeto del jugador.");
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
+
+
+
+
+
 
 
     void Update()
     {
+        if (SceneManager.GetActiveScene().name == "GameplayScene" || contextMenuPanel == null)
+            return;
+
         if (Input.GetMouseButtonDown(0))
         {
             if (!RectTransformUtility.RectangleContainsScreenPoint(
@@ -165,13 +246,86 @@ public class ChatManager : MonoBehaviour
         }
     }
 
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "GameplayScene")
+        {
+            chatText = null;
+            chatScrollRect = null;
+            UserListContainer = null;
+
+            if (botonRevancha != null)
+                botonRevancha.gameObject.SetActive(false);
+        }
+        else if (scene.name == "ChatScene")
+        {
+            // Reasignar referencias de UI
+            chatText = GameObject.Find("ChatText")?.GetComponent<TextMeshProUGUI>();
+            chatScrollRect = GameObject.FindObjectOfType<ScrollRect>();
+            UserListContainer = GameObject.Find("UserListContainer")?.transform;
+            messageInput = GameObject.Find("MessageInput")?.GetComponent<TMP_InputField>();
+
+            if (messageInput != null)
+            {
+                messageInput.onSubmit.RemoveAllListeners();
+                messageInput.onSubmit.AddListener(OnSubmitMessage);
+            }
+
+            // ✅ Reasignar botón de revancha
+            GameObject botonObj = GameObject.Find("BotonRevancha");
+            if (botonObj != null)
+            {
+                botonRevancha = botonObj.GetComponent<Button>();
+                botonRevancha.gameObject.SetActive(true);
+                botonRevancha.onClick.RemoveAllListeners();
+                botonRevancha.onClick.AddListener(EnviarSolicitudRematch);
+            }
+            else
+            {
+                Debug.LogWarning("No se encontró el botón de revancha al volver al lobby.");
+            }
+
+            // ✅ Reasignar botón de ping ("Jugar")
+            GameObject pingObj = GameObject.Find("ButtonPlay");
+            if (pingObj != null)
+            {
+                pingButton = pingObj.GetComponent<Button>();
+                pingButton.gameObject.SetActive(false); // oculto por defecto
+                pingButton.onClick.RemoveAllListeners();
+                pingButton.onClick.AddListener(EnviarPingMatch);
+                Debug.Log("✅ pingButton reasignado en escena ChatScene");
+            }
+            else
+            {
+                Debug.LogWarning("⚠️ No se encontró ButtonPlay al volver al lobby.");
+            }
+
+            if (UserListContainer == null)
+                Debug.LogWarning("UserListContainer no fue encontrado en el lobby.");
+
+            PedirJugadoresConectados();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
     private void OnWebSocketOpen(object sender, System.EventArgs e)
     {
         UnityMainThreadDispatcher.Enqueue(() =>
         {
-
-            chatText.text += "\n Conectado al servidor";
-
+            if (chatText != null)
+                chatText.text += "\n Conectado al servidor";
         });
     }
 
@@ -260,7 +414,8 @@ public class ChatManager : MonoBehaviour
                 {
                     if (serverMessage.data.id != myId)
                     {
-                        chatText.text += $"\n [+] {serverMessage.data.name} se ha conectado";
+                        if (chatText != null)
+                            chatText.text += $"\n [+] {serverMessage.data.name} se ha conectado";
                         PedirJugadoresConectados();
                     }
                 }
@@ -268,7 +423,8 @@ public class ChatManager : MonoBehaviour
                 {
                     if (serverMessage.data.id != myId)
                     {
-                        chatText.text += $"\n [-] {serverMessage.data.name} se ha desconectado";
+                        if (chatText != null)
+                            chatText.text += $"\n [-] {serverMessage.data.name} se ha desconectado";
                         PedirJugadoresConectados();
                     }
                 }
@@ -279,7 +435,8 @@ public class ChatManager : MonoBehaviour
                     // Evitar duplicado si es un eco del mismo jugador
                     if (mensajePublico.data != null && mensajePublico.data.playerId != myId)
                     {
-                        chatText.text += $"\n {mensajePublico.data.playerName}: {mensajePublico.data.playerMsg}";
+                        if (chatText != null)
+                            chatText.text += $"\n {mensajePublico.data.playerName}: {mensajePublico.data.playerMsg}";
                         ActualizarChatUI();
                     }
 
@@ -290,7 +447,8 @@ public class ChatManager : MonoBehaviour
                 else if (serverMessage.eventName == "private-message")
                 {
                     PublicMessage privado = JsonUtility.FromJson<PublicMessage>(json);
-                    chatText.text += $"\n {privado.data.playerName} [Mensaje Privado]: {privado.data.playerMsg}";
+                    if (chatText != null)
+                        chatText.text += $"\n {privado.data.playerName} [Mensaje Privado]: {privado.data.playerMsg}";
                     ActualizarChatUI();
                     return;
                 }
@@ -298,7 +456,8 @@ public class ChatManager : MonoBehaviour
                 else if (serverMessage.eventName == "match-accepted")
                 {
                     string playerName = ExtraerNombreDesdeMensaje(serverMessage.msg);
-                    chatText.text += $"\n {playerName} aceptó tu invitación.";
+                    if (chatText != null)
+                        chatText.text += $"\n {playerName} aceptó tu invitación.";
 
                     // Extraer matchId del JSON
                     string jsonData = e.Data.Replace("\"event\":", "\"eventName\":");
@@ -312,7 +471,8 @@ public class ChatManager : MonoBehaviour
                 else if (serverMessage.eventName == "match-rejected")
                 {
                     string playerName = ExtraerNombreDesdeMensaje(serverMessage.msg);
-                    chatText.text += $"\n {playerName} rechazó tu invitación.";
+                    if (chatText != null)
+                        chatText.text += $"\n {playerName} rechazó tu invitación.";
 
                 }
                 else if (serverMessage.eventName == "players-ready")
@@ -320,28 +480,83 @@ public class ChatManager : MonoBehaviour
                     PlayersReadyMessage readyMessage = JsonUtility.FromJson<PlayersReadyMessage>(json);
                     string matchId = readyMessage.data.matchId;
 
+                    if (chatText != null)
+                        chatText.text += $"\n Ambos jugadores están listos. Partida ID: {matchId}";
 
-                    chatText.text += $"\n Ambos jugadores están listos. Partida ID: {matchId}";
+                    // Siempre ocultar botón de conexión (por si quedó activo)
+                    if (roomButton != null)
+                        roomButton.gameObject.SetActive(false);
 
-                    roomButton.gameObject.SetActive(false);
-                    pingButton.gameObject.SetActive(true);
+                    // Mostrar botón para enviar ping
+                    if (pingButton != null)
+                    {
+                        pingButton.gameObject.SetActive(true);
+                        Debug.Log("Mostrando pingButton porque ambos jugadores están listos.");
+                    }
+                    else
+                    {
+                        Debug.LogWarning("pingButton es null en players-ready.");
+                    }
 
+                    // Guardar matchId si no estaba asignado
                     if (string.IsNullOrEmpty(pendingMatchId))
                         pendingMatchId = matchId;
                 }
+
+
                 else if (serverMessage.eventName == "ping-match")
                 {
 
-                    chatText.text += "\n Ping recibido correctamente. Esperando al otro jugador...";
+                    if (chatText != null)
+                        chatText.text += "\n Ping recibido correctamente. Esperando al otro jugador...";
                 }
                 else if (serverMessage.eventName == "match-start")
                 {
-                    chatText.text += "\n ¡La partida ha comenzado!";
+                    if (chatText != null)
+                        chatText.text += "\n ¡La partida ha comenzado!";
+                    ActualizarChatUI();
 
+                    // Ocultar botón de ping al iniciar partida
+                    if (pingButton != null)
+                        pingButton.gameObject.SetActive(false);
 
-                    // Puedes cargar escena o desactivar botones aquí
-                    pingButton.gameObject.SetActive(false);
+                    Debug.Log("Recibido evento match-start. Cargando escena GameplayScene...");
+                    yaJugamosUnaPartida = true;
+
+                    StartCoroutine(CargarGameplayDesdeChat());
                 }
+
+                else if (serverMessage.eventName == "receive-game-data")
+                {
+                    int debuffCode = Random.Range(1, 4); // 1 a 3
+
+                    string debuff = "";
+                    if (debuffCode == 1) debuff = "slow";
+                    else if (debuffCode == 2) debuff = "auto-damage";
+                    else if (debuffCode == 3) debuff = "downgrade-skill";
+
+                    Debug.Log("Haz recibido un debuff");
+                    AplicarDebuff(debuff);
+                    ActualizarChatUI();
+
+                }
+                else if (serverMessage.eventName == "game-ended")
+                {
+                    Debug.Log("Partida finalizada, has perdido.");
+                    StartCoroutine(EsperarYMostrarDerrota());
+
+                }
+                else if (serverMessage.eventName == "rematch-request")
+                {
+                    
+                }
+
+
+
+
+
+
+
 
                 ActualizarChatUI();
                 ActualizarListaUsuariosUI();
@@ -352,6 +567,7 @@ public class ChatManager : MonoBehaviour
             }
         });
     }
+
 
     public void login()
     {
@@ -382,7 +598,8 @@ public class ChatManager : MonoBehaviour
 
             ws.Send(JsonUtility.ToJson(outgoing));
 
-            chatText.text += $"\n Tú: {msg}";
+            if (chatText != null)
+                chatText.text += $"\n Tú: {msg}";
 
             ActualizarChatUI();
             messageInput.text = "";
@@ -399,7 +616,8 @@ public class ChatManager : MonoBehaviour
 
         ws.Send(JsonUtility.ToJson(request));
 
-        chatText.text += $"\n Invitación enviada a {playerName}";
+        if (chatText != null)
+            chatText.text += $"\n Invitación enviada a {playerName}";
 
         ActualizarChatUI();
     }
@@ -435,7 +653,10 @@ public class ChatManager : MonoBehaviour
         };
 
         ws.Send(JsonUtility.ToJson(privateMsg));
-        chatText.text += $"\n Tú a {selectedPlayerName}: {mensaje}";
+
+        if (chatText != null)
+            chatText.text += $"\n Tú a {selectedPlayerName}: {mensaje}";
+
         ActualizarChatUI();
         messageInput.text = "";
     }
@@ -445,7 +666,8 @@ public class ChatManager : MonoBehaviour
         var message = new SimpleEvent { @event = "accept-match" };
         ws.Send(JsonUtility.ToJson(message));
 
-        chatText.text += "\n Has aceptado la partida.";
+        if (chatText != null)
+            chatText.text += "\n Has aceptado la partida.";
 
         ActualizarChatUI();
     }
@@ -455,8 +677,8 @@ public class ChatManager : MonoBehaviour
         var message = new SimpleEvent { @event = "reject-match" };
         ws.Send(JsonUtility.ToJson(message));
 
-        chatText.text += "\n Has rechazado la partida.";
-
+        if (chatText != null)
+            chatText.text += "\n Has rechazado la partida.";
 
         ActualizarChatUI();
     }
@@ -478,8 +700,8 @@ public class ChatManager : MonoBehaviour
         Debug.Log("Enviando connect-match: " + json);
         ws.Send(json);
 
-
-        chatText.text += "\n Te estás conectando a la partida...";
+        if (chatText != null)
+            chatText.text += "\n Te estás conectando a la partida...";
 
         ActualizarChatUI();
 
@@ -493,11 +715,26 @@ public class ChatManager : MonoBehaviour
         Debug.Log("Enviando ping-match: " + json);
         ws.Send(json);
 
-
-        chatText.text += "\n Enviando ping para sincronizar...";
+        if (chatText != null)
+            chatText.text += "\n Enviando ping para sincronizar...";
 
         ActualizarChatUI();
     }
+
+    public void EnviarSenalDebuff()
+    {
+        if (ws != null && ws.ReadyState == WebSocketState.Open)
+        {
+            string json = "{\"event\":\"send-game-data\"}";
+            Debug.Log("Enviando señal de debuff al otro jugador...");
+            ws.Send(json);
+        }
+        else
+        {
+            Debug.LogWarning("No se pudo enviar la señal: WebSocket no está conectado.");
+        }
+    }
+
 
 
     private string ExtraerNombreDesdeMensaje(string msg)
@@ -507,8 +744,12 @@ public class ChatManager : MonoBehaviour
         return msg.Substring(start, end - start);
     }
 
+
     private void ActualizarListaUsuariosUI()
     {
+        if (SceneManager.GetActiveScene().name == "GameplayScene")
+            return;
+
         foreach (Transform child in UserListContainer)
             Destroy(child.gameObject);
 
@@ -558,14 +799,133 @@ public class ChatManager : MonoBehaviour
         }
     }
 
+
+    private IEnumerator CargarGameplayDesdeChat()
+    {
+        yield return new WaitForSeconds(1f);
+
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Prefab/scenes/GameplayScene", LoadSceneMode.Single);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
+
+    public void AplicarDebuff(string tipo)
+    {
+        if (player == null)
+            player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player == null)
+        {
+            Debug.LogWarning("No se puede aplicar debuff: jugador no encontrado.");
+            return;
+        }
+
+        if (tipo == "slow" && slowDebuffSO != null)
+        {
+            slowDebuffSO.Apply(player);
+            Debug.Log("Debuff enviado");
+        }
+        else if (tipo == "auto-damage" && autoDamageDebuffSO != null)
+        {
+            autoDamageDebuffSO.Apply(player);
+            Debug.Log("Debuff enviado");
+        }
+        else if (tipo == "downgrade-skill" && downgradeSkillDebuffSO != null)
+        {
+            downgradeSkillDebuffSO.Apply(player);
+            Debug.Log("Debuff enviado");
+        }
+        else
+        {
+            Debug.LogWarning("Debuff no reconocido o ScriptableObject no asignado: " + tipo);
+        }
+    }
+
+    public void FinalizarPartida()
+    {
+        var message = new SimpleEvent { @event = "finish-game" };
+        string json = JsonUtility.ToJson(message);
+        Debug.Log("Enviando evento finish-game...");
+        ws.Send(json);
+    }
+
+    private IEnumerator EsperarYMostrarDerrota()
+    {
+        yield return new WaitForSeconds(0.5f); // permitir que todo cargue
+
+        Debug.Log(" Buscando PlayerLose en objetos desactivados...");
+
+        // ✅ Busca el componente PlayerLose en toda la escena, incluso si está desactivado
+        PlayerLose playerLose = null;
+
+        foreach (PlayerLose pl in Resources.FindObjectsOfTypeAll<PlayerLose>())
+        {
+            if (pl.gameObject.scene.name != null && pl.gameObject.name == "GameOverPanel")
+            {
+                playerLose = pl;
+                break;
+            }
+        }
+
+        if (playerLose != null)
+        {
+            Debug.Log(" PlayerLose encontrado en GameOverPanel, mostrando derrota.");
+            playerLose.Lose();
+        }
+        else
+        {
+            Debug.LogWarning(" No se encontró el PlayerLose en GameOverPanel.");
+        }
+    }
+
+    public void EnviarSolicitudRematch()
+    {
+        var message = new SimpleEvent { @event = "send-rematch-request" };
+        ws.Send(JsonUtility.ToJson(message));
+        Debug.Log("🔁 Evento send-rematch-request enviado.");
+
+        if (chatText != null)
+            chatText.text += "\n Has solicitado una revancha. Esperando al otro jugador...";
+    }
+
+
+
+    public void SendRawMessage(string json)
+    {
+        if (ws != null && ws.ReadyState == WebSocketState.Open)
+        {
+            ws.Send(json);
+        }
+        else
+        {
+            Debug.LogWarning("No se pudo enviar mensaje: WebSocket no está conectado.");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
     private void ActualizarChatUI()
     {
+        if (chatText == null || chatScrollRect == null) return;
+
         chatText.ForceMeshUpdate();
         Canvas.ForceUpdateCanvases();
         LayoutRebuilder.ForceRebuildLayoutImmediate(chatText.rectTransform);
         LayoutRebuilder.ForceRebuildLayoutImmediate(chatScrollRect.content);
         chatScrollRect.verticalNormalizedPosition = 0f;
     }
+
 
 
     void OnApplicationQuit()

@@ -82,6 +82,7 @@ public class Tragamonedas : MonoBehaviour, IEnemy
         hp -= damageAmount;
         if (hp < 1)
         {
+            ScoreManager.Instance.AddScore(100); // Añadir puntaje al morir
             Destroy(gameObject);
         }
     }

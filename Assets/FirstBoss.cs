@@ -117,9 +117,11 @@ public class BossEnemy : MonoBehaviour, IEnemy
                 Level level = targetGameObject.GetComponent<Level>();
                 if (level != null)
                 {
+                    ScoreManager.Instance.AddScore(100); // Añadir puntaje al morir
                     level.addExperience(experienceReward);
                 }
             }
+            ScoreManager.Instance.AddScore(300);
             Destroy(gameObject);
         }
     }

@@ -113,6 +113,7 @@ public class EnemyBola8 : MonoBehaviour, IEnemy
         hp -= damage;
         if (hp < 1)
         {
+            ScoreManager.Instance.AddScore(100); // Añadir puntaje al morir
             Destroy(gameObject);
         }
     }
