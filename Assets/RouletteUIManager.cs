@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
+
 
 public class RouletteUIManager : MonoBehaviour
 {

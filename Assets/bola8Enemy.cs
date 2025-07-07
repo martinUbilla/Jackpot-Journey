@@ -20,6 +20,7 @@ public class EnemyBola8 : MonoBehaviour, IEnemy
     private SpriteRenderer spriteRenderer;
     [SerializeField] GameObject coinPrefab;
     [SerializeField] float dropOffset = 0.5f;
+    [SerializeField] int experience_reward = 400;
 
     private Vector2 chargeDirection;
     private float chargeTime;
@@ -115,9 +116,12 @@ public class EnemyBola8 : MonoBehaviour, IEnemy
         hp -= damage;
         if (hp < 1)
         {
-            targetGameObject.GetComponent<Level>().addExperience(exp);
+            targetGameObject.GetComponent<Level>().addExperience(experience_reward);
+            ScoreManager.Instance.AddScore(100); // Añadir puntaje al morir
             DropItem();
             Destroy(gameObject);
+
+
         }
     }
     private void DropItem()
