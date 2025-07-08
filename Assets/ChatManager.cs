@@ -161,7 +161,11 @@ public class ChatManager : MonoBehaviour
             gameObject.AddComponent<UnityMainThreadDispatcher>();
 
         // Conexión WebSocket
+<<<<<<< Updated upstream
         ws = new WebSocket("ws://ucn-game-server.martux.cl:4010/?gameId=F&playerName=ElNochi");
+=======
+        ws = new WebSocket("ws://ucn-game-server.martux.cl:4010/?gameId=F&playerName=ElNochi22");
+>>>>>>> Stashed changes
         ws.OnOpen += OnWebSocketOpen;
         ws.OnMessage += OnWebSocketMessage;
         ws.Connect();
@@ -550,6 +554,20 @@ public class ChatManager : MonoBehaviour
                 {
                     
                 }
+                else if (serverMessage.eventName == "close-match")
+                {
+                    Debug.Log("🚪 El otro jugador se ha salido. Cerrando la partida...");
+
+                    // Mensaje opcional para el chat
+                    if (chatText != null)
+                        chatText.text += "\n El otro jugador abandonó la partida.";
+
+                    ActualizarChatUI();
+
+                    // Cargar escena principal directamente
+                    SceneManager.LoadScene("MainMenu");
+                }
+
 
 
 

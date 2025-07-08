@@ -5458,7 +5458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScore: 0
   scoreText: {fileID: 1524309640}
-  scoreToWin: 300
+  scoreToWin: 1000
   playerWin: {fileID: 1443812012}
 --- !u!1 &1193304005
 GameObject:
