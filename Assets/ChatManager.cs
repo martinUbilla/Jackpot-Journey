@@ -161,11 +161,10 @@ public class ChatManager : MonoBehaviour
             gameObject.AddComponent<UnityMainThreadDispatcher>();
 
         // Conexión WebSocket
-<<<<<<< Updated upstream
+
         ws = new WebSocket("ws://ucn-game-server.martux.cl:4010/?gameId=F&playerName=ElNochi");
-=======
-        ws = new WebSocket("ws://ucn-game-server.martux.cl:4010/?gameId=F&playerName=ElNochi22");
->>>>>>> Stashed changes
+
+
         ws.OnOpen += OnWebSocketOpen;
         ws.OnMessage += OnWebSocketMessage;
         ws.Connect();
