@@ -50,12 +50,10 @@ MonoBehaviour:
   damage: 2
   experienceReward: 1500
   speed: 1
-  rayoRange: 20
-  explosionRange: 20
+  rayoRange: 10
+  explosionRange: 4
   meleeRange: 2
   attackCooldown: 2
-  coinPrefab: {fileID: 1328010146122572623, guid: a6d518240142f0748bdb65eaa5fe624d, type: 3}
-  dropOffset: 0.5
 --- !u!50 &3166685477037173842
 Rigidbody2D:
   serializedVersion: 5
@@ -82,7 +80,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!61 &8710456037188802042
 BoxCollider2D:
   m_ObjectHideFlags: 0

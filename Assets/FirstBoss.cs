@@ -119,7 +119,7 @@ public class BossEnemy : MonoBehaviour, IEnemy
                 Level level = targetGameObject.GetComponent<Level>();
                 if (level != null)
                 {
-                    ScoreManager.Instance.AddScore(100); // Añadir puntaje al morir
+                    ScoreManager.Instance.AddScore(100); // Aï¿½adir puntaje al morir
                     level.addExperience(experienceReward);
                 }
             }
@@ -153,11 +153,11 @@ public class BossEnemy : MonoBehaviour, IEnemy
     }
     private void DropItem()
     {
-        // Genera el objeto en la posición del jefe con un pequeño desplazamiento
+        // Genera el objeto en la posiciï¿½n del jefe con un pequeï¿½o desplazamiento
         Vector3 dropPosition = transform.position + new Vector3(Random.Range(-dropOffset, dropOffset), Random.Range(-dropOffset, dropOffset), 0);
             // Dropea una moneda
             Instantiate(coinPrefab, dropPosition, Quaternion.identity);
-            Debug.Log("¡Droppé una moneda!");
+            Debug.Log("ï¿½Droppï¿½ una moneda!");
         
         
     }

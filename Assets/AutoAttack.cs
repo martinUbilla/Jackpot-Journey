@@ -1,7 +1,5 @@
 using System;
 using System.Collections;
-using Unity.VisualScripting;
-
 using UnityEngine;
 
 public class AutoAttack : MonoBehaviour
@@ -9,7 +7,7 @@ public class AutoAttack : MonoBehaviour
     [Header("Attack Settings")]
     [SerializeField] private float attackRange = 2f;     // Rango de ataque
     [SerializeField] private float attackCooldown = 0.5f; // Tiempo entre ataques
-    [SerializeField] private int damage;             // Daño infligido por ataque
+    [SerializeField] private int damage;             // Daï¿½o infligido por ataque
     [SerializeField] private LayerMask enemyLayer;        // Capa de enemigos
     [SerializeField] GameObject spriteWhipLeft;
     [SerializeField] GameObject spriteWhipRight;
@@ -54,7 +52,7 @@ public class AutoAttack : MonoBehaviour
                     SoundManager.Instance.PlaySound(attackSound);
 
                 }
-                // Obtener el componente de salud del enemigo y aplicar daño
+                // Obtener el componente de salud del enemigo y aplicar daï¿½o
                 IEnemy enemyHealth = enemy.GetComponent<IEnemy>();
                
                 if (enemyHealth != null)
@@ -67,7 +65,7 @@ public class AutoAttack : MonoBehaviour
        
     }
 
-    // Visualización del rango en el editor
+    // Visualizaciï¿½n del rango en el editor
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
