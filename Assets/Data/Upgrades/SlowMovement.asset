@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrade: {fileID: 0}
   UpgradeType: 0
-  Name: 
+  Name: Ralentizado
   icon: {fileID: 1363242104879333270, guid: a459e8ff18084b74da12ac45c34accf4, type: 3}
   currentLevel: 0
   cooldownDuration: 0

@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
+using TMPro;
 using UnityEngine;
 
 public class Level : MonoBehaviour
@@ -19,6 +21,7 @@ public class Level : MonoBehaviour
     [SerializeField] private List<UpgradeData> downgrades;
     [SerializeField] private Transform upgradeUIContainer;
     [SerializeField] private UpgradeIconUI upgradeIconPrefab;
+    [SerializeField] TextMeshProUGUI mensaje;
 
     private List<UpgradeIconUI> activeIcons = new List<UpgradeIconUI>();
 
@@ -58,7 +61,7 @@ public class Level : MonoBehaviour
             HealToFull();
             IncreaseDamage();
             experienceBar.SetLevelText(level);
-            if (level > 6)
+            if (level > 999)
             {
                 GetComponent<PlayerMove>().enabled = false;
                 winPanel.SetActive(true);
@@ -71,7 +74,7 @@ public class Level : MonoBehaviour
 
     private void IncreaseDamage()
     {
-        arma.subirDamage(100);
+        arma.subirDamage(10);
     }
 
     private void HealToFull()
@@ -142,7 +145,9 @@ public class Level : MonoBehaviour
         if (player != null)
         {
             Debug.Log("Aplicando mejora: " + upgradeData.Name);
+            
             upgradeData.Apply(player);
+            ShowUpgradeMessage($"{upgradeData.Name}");
         }
         if (!upgradeData.IsNegative)
         {
@@ -157,6 +162,7 @@ public class Level : MonoBehaviour
 
     }
 
+    
 
     public void ResetUpgradeState()
         {
@@ -211,8 +217,30 @@ public class Level : MonoBehaviour
         }
     }
 
+    public void ShowUpgradeMessage(string message)
+    {
+        Debug.Log($"Intentando mostrar mensaje: {message}");
+        Debug.Log($"Campo mensaje es null: {mensaje == null}");
+        if (mensaje != null) // Usar el campo declarado arriba, no crear una variable local
+        {
+            mensaje.text = message;
+            mensaje.gameObject.SetActive(true);
 
+            // Hacer que desaparezca después de 3 segundos
+            StartCoroutine(HideMessageAfterDelay(mensaje, 3f));
+        }
+        else
+        {
+            Debug.LogWarning("TextMeshProUGUI 'mensaje' no está asignado");
+        }
+    }
 
+    private IEnumerator HideMessageAfterDelay(TextMeshProUGUI textComponent, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        textComponent.text = "";
+        textComponent.gameObject.SetActive(false);
+    }
 
 
 }

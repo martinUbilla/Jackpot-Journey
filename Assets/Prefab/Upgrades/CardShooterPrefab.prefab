@@ -47,7 +47,7 @@ MonoBehaviour:
   cardPrefab: {fileID: 3768652767745601112, guid: 8de11a7f219e9884ea45a9f50aacc076, type: 3}
   shootInterval: 1.8
   cardSpeed: 6
-  cardDamage: 50
+  cardDamage: 10
   cardSprites:
   - {fileID: -1961201463, guid: 5336923e253704349b62e13ef03b1040, type: 3}
   - {fileID: 1841731613, guid: 5336923e253704349b62e13ef03b1040, type: 3}

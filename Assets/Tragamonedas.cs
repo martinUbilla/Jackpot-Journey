@@ -15,13 +15,14 @@ public class Tragamonedas : MonoBehaviour, IEnemy
     [SerializeField] float fireCooldown = 2f;
     [SerializeField] Transform firePoint;
     [SerializeField] float speed = 3f;
-    [SerializeField] int exp;
+    [SerializeField] int experience_reward = 400;
+    [SerializeField] GameObject coinPrefab;
+    [SerializeField] float dropOffset = 0.5f;
+
     private float nextFireTime;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    [SerializeField] GameObject coinPrefab;
-    [SerializeField] float dropOffset = 0.5f;
-    [SerializeField] int experience_reward = 400;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();

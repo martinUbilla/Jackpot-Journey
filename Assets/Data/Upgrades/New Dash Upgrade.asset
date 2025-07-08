@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrade: {fileID: 0}
   UpgradeType: 0
-  Name: Dash
+  Name: Dash (shift)
   icon: {fileID: 7110878671101974141, guid: dec6c9365931b774cbf172e3a63f4894, type: 3}
   currentLevel: 0
   cooldownDuration: 1.5999999
@@ -22,4 +22,3 @@ MonoBehaviour:
   cooldownReductionPerLevel: 0.2
   minCooldown: 0.5
   dashCooldown: 2
-  dashSound: {fileID: 8300000, guid: 9a3548007e9a7a040afae21445648e29, type: 3}

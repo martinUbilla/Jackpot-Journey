@@ -10,7 +10,7 @@ public class RouletteUIManager : MonoBehaviour
     public List<RouletteEffect> possibleEffects; // Lista de posibles resultados
     public Character playerStats;              // Referencia al jugador
     public TMPro.TextMeshProUGUI resultText;     // Texto para mostrar resultado
-    public int spinCost = 3; // el costo en monedas
+    public int spinCost = 5; // el costo en monedas
 
 
     void Start()

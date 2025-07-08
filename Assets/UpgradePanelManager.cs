@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UpgradePanelManager : MonoBehaviour
@@ -7,7 +8,7 @@ public class UpgradePanelManager : MonoBehaviour
     [SerializeField] GameObject panel;
     PauseManager pauseManager;
     [SerializeField] List<UpgradeButton> upgradesButton;
-
+    
     private void Awake()
     {
         pauseManager = GetComponent<PauseManager>();
@@ -107,4 +108,5 @@ public class UpgradePanelManager : MonoBehaviour
 
         Debug.Log("Panel cerrado");
     }
+    
 }

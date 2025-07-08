@@ -112,6 +112,7 @@ public class ChatManager : MonoBehaviour
     public Button acceptMatchButton;
     public Button rejectMatchButton;
 
+
     [Header("Match Rematch Button")]
     public Button botonRevancha;
 
@@ -161,7 +162,7 @@ public class ChatManager : MonoBehaviour
             gameObject.AddComponent<UnityMainThreadDispatcher>();
 
         // Conexión WebSocket
-        ws = new WebSocket("ws://ucn-game-server.martux.cl:4010/?gameId=F&playerName=ElNochi");
+        ws = new WebSocket("ws://ucn-game-server.martux.cl:4010/?gameId=F&playerName=ElNochi2");
         ws.OnOpen += OnWebSocketOpen;
         ws.OnMessage += OnWebSocketMessage;
         ws.Connect();
@@ -215,7 +216,7 @@ public class ChatManager : MonoBehaviour
             matchRequestPopup.SetActive(false);
         });
 
-
+       
 
         // Jugador
         player = GameObject.FindGameObjectWithTag("Player");
@@ -307,15 +308,6 @@ public class ChatManager : MonoBehaviour
             PedirJugadoresConectados();
         }
     }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -548,7 +540,7 @@ public class ChatManager : MonoBehaviour
                 }
                 else if (serverMessage.eventName == "rematch-request")
                 {
-                    
+
                 }
 
 

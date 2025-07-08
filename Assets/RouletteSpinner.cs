@@ -5,7 +5,7 @@ using TMPro;
 
 public class RouletteSpinner : MonoBehaviour
 {
-    [Header("Configuración de la Ruleta")]
+    [Header("Configuraciï¿½n de la Ruleta")]
     public Transform wheel; // El objeto que rota (tu ruleta)
     public float spinDuration = 3f;
     public int numberOfSpins = 4; // Siempre 4 giros completos
@@ -16,9 +16,9 @@ public class RouletteSpinner : MonoBehaviour
     public TextMeshProUGUI resultText;
     public Image resultIcon;
 
-    [Header("Configuración Avanzada")]
-    public AnimationCurve spinCurve = AnimationCurve.EaseInOut(0, 0, 1, 1); // Curva de animación personalizable
-    public bool useEaseOutCubic = true; // Si prefieres usar la función cubic
+    [Header("Configuraciï¿½n Avanzada")]
+    public AnimationCurve spinCurve = AnimationCurve.EaseInOut(0, 0, 1, 1); // Curva de animaciï¿½n personalizable
+    public bool useEaseOutCubic = true; // Si prefieres usar la funciï¿½n cubic
 
     private bool isSpinning = false;
     private float currentRotation = 0f;
@@ -29,25 +29,25 @@ public class RouletteSpinner : MonoBehaviour
         // CONDICIONALES PARA PERMITIR O NO LA RULETA
         if (isSpinning)
         {
-            Debug.Log("La ruleta ya está girando");
+            Debug.Log("La ruleta ya estï¿½ girando");
             return;
         }
 
         // Verificar si el jugador tiene suficientes monedas
-        if (playerStats != null && !playerStats.SpendCoins(3)) // Cambia el 3 por el costo que quieras
+        if (playerStats != null && !playerStats.SpendCoins(5)) // Cambia el 3 por el costo que quieras
         {
             if (resultText != null)
-                resultText.text = "¡No tienes suficientes monedas!";
+                resultText.text = "ï¿½No tienes suficientes monedas!";
             Debug.Log("No tienes monedas suficientes para girar");
             return;
         }
 
-        // Verificar si el jugador está vivo
+        // Verificar si el jugador estï¿½ vivo
         if (playerStats != null && playerStats.currentHp <= 0)
         {
             if (resultText != null)
-                resultText.text = "¡No puedes usar la ruleta estando muerto!";
-            Debug.Log("El jugador está muerto");
+                resultText.text = "ï¿½No puedes usar la ruleta estando muerto!";
+            Debug.Log("El jugador estï¿½ muerto");
             return;
         }
 
@@ -69,7 +69,7 @@ public class RouletteSpinner : MonoBehaviour
 
     private void OnDisable()
     {
-        // Detener la animación si el objeto se desactiva
+        // Detener la animaciï¿½n si el objeto se desactiva
         if (spinCoroutine != null)
         {
             StopCoroutine(spinCoroutine);
@@ -82,35 +82,35 @@ public class RouletteSpinner : MonoBehaviour
         isSpinning = true;
 
         // Debug inicial
-        Debug.Log("Iniciando animación de ruleta...");
+        Debug.Log("Iniciando animaciï¿½n de ruleta...");
 
-        // Configuración básica
+        // Configuraciï¿½n bï¿½sica
         int numberOfSections = effects.Length;
-        float anglePerSection = 360f / numberOfSections; // Para 5 sectores = 72° cada uno
+        float anglePerSection = 360f / numberOfSections; // Para 5 sectores = 72ï¿½ cada uno
 
-        // Seleccionar resultado ANTES de la animación
+        // Seleccionar resultado ANTES de la animaciï¿½n
         int selectedIndex = Random.Range(0, numberOfSections);
 
-        // Calcular posición inicial normalizada
+        // Calcular posiciï¿½n inicial normalizada
         float currentNormalizedAngle = currentRotation % 360f;
         if (currentNormalizedAngle < 0) currentNormalizedAngle += 360f;
 
-        // CORRECCIÓN PARA GIRO HORARIO
+        // CORRECCIï¿½N PARA GIRO HORARIO
         // Como la ruleta gira en sentido horario, pero Unity rota en antihorario con valores positivos,
-        // necesitamos invertir la lógica
+        // necesitamos invertir la lï¿½gica
         float targetSectorCenter = selectedIndex * anglePerSection;
 
-        // Para giro horario, invertimos la rotación
+        // Para giro horario, invertimos la rotaciï¿½n
         targetSectorCenter = -targetSectorCenter;
 
-        // Agregar una pequeña variación aleatoria dentro del sector (±15°, más pequeña que antes)
+        // Agregar una pequeï¿½a variaciï¿½n aleatoria dentro del sector (ï¿½15ï¿½, mï¿½s pequeï¿½a que antes)
         float randomVariation = Random.Range(-15f, 15f);
         float finalTargetAngle = targetSectorCenter + randomVariation;
 
-        // Calcular cuántos grados necesitamos rotar desde la posición actual
+        // Calcular cuï¿½ntos grados necesitamos rotar desde la posiciï¿½n actual
         float rotationNeeded = finalTargetAngle - currentNormalizedAngle;
 
-        // Si necesitamos rotar "hacia atrás", agregar una vuelta completa
+        // Si necesitamos rotar "hacia atrï¿½s", agregar una vuelta completa
         if (rotationNeeded < 0)
         {
             rotationNeeded += 360f;
@@ -124,19 +124,19 @@ public class RouletteSpinner : MonoBehaviour
         float targetAngle = startAngle + totalRotation;
         float elapsedTime = 0f;
 
-        // Mostrar que está girando
+        // Mostrar que estï¿½ girando
         if (resultText != null)
-            resultText.text = "Girando...";
+            StartCoroutine(ShowTextWithDelay(resultText, "Girando ...", 1f));
 
         Debug.Log($"=== DEBUG RULETA ===");
-        Debug.Log($"Efecto seleccionado: {effects[selectedIndex].name} (índice {selectedIndex})");
-        Debug.Log($"Ángulo actual: {currentNormalizedAngle}°");
-        Debug.Log($"Ángulo objetivo del sector: {targetSectorCenter}°");
-        Debug.Log($"Ángulo objetivo final: {finalTargetAngle}°");
-        Debug.Log($"Rotación total: {totalRotation}°");
-        Debug.Log($"Ángulo final absoluto: {targetAngle}°");
+        Debug.Log($"Efecto seleccionado: {effects[selectedIndex].name} (ï¿½ndice {selectedIndex})");
+        Debug.Log($"ï¿½ngulo actual: {currentNormalizedAngle}ï¿½");
+        Debug.Log($"ï¿½ngulo objetivo del sector: {targetSectorCenter}ï¿½");
+        Debug.Log($"ï¿½ngulo objetivo final: {finalTargetAngle}ï¿½");
+        Debug.Log($"Rotaciï¿½n total: {totalRotation}ï¿½");
+        Debug.Log($"ï¿½ngulo final absoluto: {targetAngle}ï¿½");
 
-        // Animación principal
+        // Animaciï¿½n principal
         while (elapsedTime < spinDuration)
         {
             elapsedTime += Time.unscaledDeltaTime;
@@ -144,7 +144,7 @@ public class RouletteSpinner : MonoBehaviour
             float t = elapsedTime / spinDuration;
             t = Mathf.Clamp01(t);
 
-            // Usar curva de animación
+            // Usar curva de animaciï¿½n
             float easedT = useEaseOutCubic ? EaseOutCubic(t) : spinCurve.Evaluate(t);
 
             float currentAngle = Mathf.Lerp(startAngle, targetAngle, easedT);
@@ -157,7 +157,7 @@ public class RouletteSpinner : MonoBehaviour
             }
             else
             {
-                Debug.LogError("¡El objeto wheel es null durante la animación!");
+                Debug.LogError("ï¿½El objeto wheel es null durante la animaciï¿½n!");
                 isSpinning = false;
                 yield break;
             }
@@ -165,7 +165,7 @@ public class RouletteSpinner : MonoBehaviour
             yield return null;
         }
 
-        // Asegurar que termina en la posición exacta
+        // Asegurar que termina en la posiciï¿½n exacta
         if (wheel != null)
         {
             wheel.localEulerAngles = new Vector3(0, 0, -targetAngle);
@@ -180,7 +180,7 @@ public class RouletteSpinner : MonoBehaviour
             resultIcon.sprite = selectedEffect.icon;
 
         if (resultText != null)
-            resultText.text = $"¡{selectedEffect.name}!";
+            StartCoroutine(ShowTextWithDelay(resultText, $"ï¿½{selectedEffect.name}!", 1f));
 
         // Aplicar efecto al jugador
         selectedEffect.Apply(playerStats);
@@ -192,33 +192,33 @@ public class RouletteSpinner : MonoBehaviour
         int calculatedIndex = CalculateResultFromAngle(finalNormalizedAngle);
 
         Debug.Log($"=== RESULTADO ===");
-        Debug.Log($"Ángulo final normalizado: {finalNormalizedAngle}°");
-        Debug.Log($"Índice seleccionado: {selectedIndex}");
-        Debug.Log($"Índice calculado: {calculatedIndex}");
+        Debug.Log($"ï¿½ngulo final normalizado: {finalNormalizedAngle}ï¿½");
+        Debug.Log($"ï¿½ndice seleccionado: {selectedIndex}");
+        Debug.Log($"ï¿½ndice calculado: {calculatedIndex}");
         Debug.Log($"Efecto aplicado: {selectedEffect.name}");
 
         if (selectedIndex != calculatedIndex)
         {
-            Debug.LogWarning("¡Los índices no coinciden!");
+            Debug.LogWarning("ï¿½Los ï¿½ndices no coinciden!");
         }
 
         isSpinning = false;
     }
 
-    // Método para calcular el resultado basado en el ángulo final
+    // Mï¿½todo para calcular el resultado basado en el ï¿½ngulo final
     private int CalculateResultFromAngle(float normalizedAngle)
     {
         int numberOfSections = effects.Length;
         float anglePerSection = 360f / numberOfSections;
 
-        // Ajustar el ángulo para que el centro del sector 0 esté en 0°
+        // Ajustar el ï¿½ngulo para que el centro del sector 0 estï¿½ en 0ï¿½
         float adjustedAngle = normalizedAngle + (anglePerSection / 2f);
         if (adjustedAngle >= 360f) adjustedAngle -= 360f;
 
-        // Calcular en qué sector está la flecha
+        // Calcular en quï¿½ sector estï¿½ la flecha
         int sectorIndex = Mathf.FloorToInt(adjustedAngle / anglePerSection);
 
-        // Asegurar que está en rango
+        // Asegurar que estï¿½ en rango
         return sectorIndex % numberOfSections;
     }
 
@@ -228,7 +228,7 @@ public class RouletteSpinner : MonoBehaviour
         return t * t * t + 1;
     }
 
-    // Métodos adicionales útiles
+    // Mï¿½todos adicionales ï¿½tiles
     public void SetSpinDuration(float duration)
     {
         spinDuration = Mathf.Max(0.5f, duration);
@@ -244,7 +244,7 @@ public class RouletteSpinner : MonoBehaviour
         return isSpinning;
     }
 
-    // Resetear rotación si es necesario
+    // Resetear rotaciï¿½n si es necesario
     public void ResetRotation()
     {
         if (!isSpinning)
@@ -252,5 +252,18 @@ public class RouletteSpinner : MonoBehaviour
             currentRotation = 0f;
             wheel.localEulerAngles = Vector3.zero;
         }
+    }
+    private IEnumerator ShowTextWithDelay(TextMeshProUGUI textComponent, string message, float displayDuration)
+    {
+        // Mostrar el texto
+        textComponent.text = message;
+        textComponent.gameObject.SetActive(true);
+
+        // Esperar el tiempo especificado
+        yield return new WaitForSeconds(displayDuration);
+
+        // Ocultar el texto
+        textComponent.text = "";
+        textComponent.gameObject.SetActive(false);
     }
 }

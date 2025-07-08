@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrade: {fileID: 0}
   UpgradeType: 0
-  Name: 
+  Name: Bajas de Nivel
   icon: {fileID: 4859045227529045888, guid: 589384e63cb7ead489116e631199ff3e, type: 3}
   currentLevel: 0
   cooldownDuration: 0

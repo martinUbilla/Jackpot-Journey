@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3357349784930217380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2990851626802563622}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2990851626802563622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3357349784930217380}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3867799242627829128}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5797863514307324308
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,7 +62,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2990851626802563622}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5691706916975469002
@@ -47,13 +79,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1500
-  damage: 2
+  damage: 5
   experienceReward: 1500
-  speed: 1
+  speed: 3
   rayoRange: 20
-  explosionRange: 20
+  explosionRange: 5
   meleeRange: 2
   attackCooldown: 2
+  rayoProjectilePrefab: {fileID: 3489703856579885222, guid: 322265f7e84ed3b4bb0bb321da670271, type: 3}
+  explosionProjectilePrefab: {fileID: 6352459628860244929, guid: cc49d65c753252c4393a14232c11f788, type: 3}
+  firePoint: {fileID: 2990851626802563622}
+  rayoDamage: 30
+  explosionDamage: 30
   coinPrefab: {fileID: 1328010146122572623, guid: a6d518240142f0748bdb65eaa5fe624d, type: 3}
   dropOffset: 0.5
 --- !u!50 &3166685477037173842
@@ -82,7 +119,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!61 &8710456037188802042
 BoxCollider2D:
   m_ObjectHideFlags: 0

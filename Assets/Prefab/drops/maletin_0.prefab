@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 4612146634164405782, guid: 2e929997938b9d349a099104988b42c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -149,9 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14308ef81da9a3246a0d1464db8f1d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPrefab: {fileID: 2514863433544146443}
-  heartPrefab: {fileID: 8284586953462079264}
-  healAmount: 20
+  coinPrefab: {fileID: 1328010146122572623, guid: a6d518240142f0748bdb65eaa5fe624d, type: 3}
+  heartPrefab: {fileID: 1329795013427799103, guid: b97a9348685a068409e9fa3b2ff62cd0, type: 3}
   dropOffset: 1
 --- !u!1 &2514863433544146443
 GameObject:
@@ -228,7 +227,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7675826601332790545, guid: d13ad60000376e149a2becd2e7471396, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -315,7 +314,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 2903848411162822477, guid: 69bcdf182f83b66499f3f66bba45a6de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
