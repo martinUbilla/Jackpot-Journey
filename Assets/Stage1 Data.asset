@@ -48,7 +48,7 @@ MonoBehaviour:
     message: 
     enemyToSpawn: {fileID: 11400000, guid: 4c4f06e69c79d4049ac8f0c0162901c2, type: 2}
     objectToSpawn: {fileID: 0}
-    count: 4
+    count: 6
   - eventType: 0
     time: 40
     message: 

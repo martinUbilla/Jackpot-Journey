@@ -18,7 +18,7 @@ public class RouletteEffect
         InstantDamage,
         ReduceAttackSpeed,
         ConfuseScreen,
-        // Puedes agregar más aquí
+        // Puedes agregar mï¿½s aquï¿½
     }
 
     public void Apply(Character stats)

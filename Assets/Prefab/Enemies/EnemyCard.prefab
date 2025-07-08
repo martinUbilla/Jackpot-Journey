@@ -123,5 +123,3 @@ MonoBehaviour:
   damage: 1
   speed: 1.5
   experience_reward: 1000
-  coinPrefab: {fileID: 1328010146122572623, guid: a6d518240142f0748bdb65eaa5fe624d, type: 3}
-  dropOffset: 0.5

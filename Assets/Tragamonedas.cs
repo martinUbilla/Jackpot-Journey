@@ -15,12 +15,13 @@ public class Tragamonedas : MonoBehaviour, IEnemy
     [SerializeField] float fireCooldown = 2f;
     [SerializeField] Transform firePoint;
     [SerializeField] float speed = 3f;
-    [SerializeField] int exp;
+    [SerializeField] int experience_reward = 400;
+    [SerializeField] GameObject coinPrefab;
+    [SerializeField] float dropOffset = 0.5f;
+
     private float nextFireTime;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    [SerializeField] GameObject coinPrefab;
-    [SerializeField] float dropOffset = 0.5f;
 
     private void Awake()
     {
@@ -84,9 +85,11 @@ public class Tragamonedas : MonoBehaviour, IEnemy
         hp -= damageAmount;
         if (hp < 1)
         {
-            targetGameObject.GetComponent<Level>().addExperience(exp);
+            targetGameObject.GetComponent<Level>().addExperience(experience_reward);
+            ScoreManager.Instance.AddScore(100); // Añadir puntaje al morir
             DropItem();
             Destroy(gameObject);
+
         }
     }
 
