@@ -50,7 +50,7 @@ MonoBehaviour:
   damage: 1
   projectilePrefab: {fileID: 6463370696439883989, guid: ff96b7009f142184797d7315fb25624f, type: 3}
   detectionRange: 5
-  projectileSpeed: 10
+  projectileSpeed: 5
   fireCooldown: 2
   firePoint: {fileID: 1216921071847690527}
   speed: 3

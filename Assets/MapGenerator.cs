@@ -9,6 +9,14 @@ public class ChunkGenerator : MonoBehaviour
     public int renderDistance = 1;        // Cuántos chunks mantener activos a la redonda
     public Transform player;              // Referencia al jugador
 
+    [Header("Configuración de Objetos")]
+    public GameObject pokerCasePrefab;    // Prefab del PokerCaseDrop
+    public bool spawnObjectsInChunks = true;  // Activar/desactivar spawn de objetos
+    [Range(0f, 1f)]
+    public float objectSpawnProbability = 0.7f;  // Probabilidad de spawn por chunk
+    public int minObjectsPerChunk = 1;
+    public int maxObjectsPerChunk = 3;
+
     private Dictionary<Vector2Int, GameObject> spawnedChunks = new();
     private Vector2Int currentPlayerChunk;
 
@@ -57,6 +65,12 @@ public class ChunkGenerator : MonoBehaviour
                     GameObject prefab = chunkPrefabs[Random.Range(0, chunkPrefabs.Length)];
                     GameObject newChunk = Instantiate(prefab, chunkWorldPos, Quaternion.identity, transform);
                     spawnedChunks.Add(chunkCoord, newChunk);
+
+                    // Spawnear objetos en el chunk recién creado
+                    if (spawnObjectsInChunks)
+                    {
+                        SpawnObjectsInChunk(newChunk, chunkWorldPos);
+                    }
                 }
             }
         }
@@ -76,6 +90,66 @@ public class ChunkGenerator : MonoBehaviour
         {
             spawnedChunks.Remove(coord);
         }
+    }
+
+    private void SpawnObjectsInChunk(GameObject chunk, Vector3 chunkPosition)
+    {
+        // Verificar si este chunk debe tener objetos
+        if (Random.Range(0f, 1f) > objectSpawnProbability) return;
+
+        if (pokerCasePrefab == null)
+        {
+            Debug.LogWarning("PokerCasePrefab no asignado en ChunkGenerator");
+            return;
+        }
+
+        int objectCount = Random.Range(minObjectsPerChunk, maxObjectsPerChunk + 1);
+
+        for (int i = 0; i < objectCount; i++)
+        {
+            Vector3 spawnPos = GetRandomSpawnPositionInChunk(chunkPosition);
+            if (spawnPos != Vector3.zero)
+            {
+                GameObject spawnedObject = Instantiate(pokerCasePrefab, spawnPos, Quaternion.identity, chunk.transform);
+                Debug.Log($"PokerCase spawneado en chunk en: {spawnPos}");
+            }
+        }
+    }
+
+    private Vector3 GetRandomSpawnPositionInChunk(Vector3 chunkCenter)
+    {
+        int maxAttempts = 10;
+        float spawnRadius = chunkSize * 0.4f; // 40% del tamaño del chunk
+        float minDistanceFromCenter = chunkSize * 0.1f; // 10% del tamaño del chunk
+
+        for (int attempts = 0; attempts < maxAttempts; attempts++)
+        {
+            // Generar posición aleatoria dentro del chunk
+            Vector2 randomDirection = Random.insideUnitCircle.normalized;
+            float randomDistance = Random.Range(minDistanceFromCenter, spawnRadius);
+
+            Vector3 randomPos = chunkCenter + new Vector3(
+                randomDirection.x * randomDistance,
+                randomDirection.y * randomDistance,
+                0
+            );
+
+            // Verificar que no haya obstáculos (opcional, puedes agregar LayerMask si es necesario)
+            // Si no tienes obstáculos específicos, puedes comentar esta línea
+            if (!Physics2D.OverlapCircle(randomPos, 0.5f))
+            {
+                return randomPos;
+            }
+        }
+
+        // Si no se encontró una posición válida, usar el centro del chunk con un pequeño offset
+        Vector3 fallbackPos = chunkCenter + new Vector3(
+            Random.Range(-5f, 5f),
+            Random.Range(-5f, 5f),
+            0
+        );
+
+        return fallbackPos;
     }
 
     void OnDrawGizmos()

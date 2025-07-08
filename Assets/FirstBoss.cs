@@ -12,6 +12,13 @@ public class BossEnemy : MonoBehaviour, IEnemy
     [SerializeField] float meleeRange = 2f;
     [SerializeField] float attackCooldown = 2f;
 
+    // Nuevos campos para los ataques especiales
+    [SerializeField] GameObject rayoProjectilePrefab;
+    [SerializeField] GameObject explosionProjectilePrefab;
+    [SerializeField] Transform firePoint; // Punto desde donde salen los proyectiles
+    [SerializeField] int rayoDamage = 3;
+    [SerializeField] int explosionDamage = 4;
+
     private float nextAttackTime;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -29,6 +36,12 @@ public class BossEnemy : MonoBehaviour, IEnemy
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Si no se asignó firePoint, usar la posición del boss
+        if (firePoint == null)
+        {
+            firePoint = transform;
+        }
     }
 
     public void SetTarget(GameObject target)
@@ -70,7 +83,7 @@ public class BossEnemy : MonoBehaviour, IEnemy
             case BossAttackState.Rayo:
                 if (distance <= rayoRange)
                 {
-                    Attack();
+                    RayoAttack();
                     currentState = BossAttackState.Explosion;
                     nextAttackTime = Time.time + attackCooldown;
                 }
@@ -79,7 +92,7 @@ public class BossEnemy : MonoBehaviour, IEnemy
             case BossAttackState.Explosion:
                 if (distance <= explosionRange)
                 {
-                    Attack();
+                    ExplosionAttack();
                     currentState = BossAttackState.Melee;
                     nextAttackTime = Time.time + attackCooldown;
                 }
@@ -88,7 +101,7 @@ public class BossEnemy : MonoBehaviour, IEnemy
             case BossAttackState.Melee:
                 if (distance <= meleeRange)
                 {
-                    Attack();
+                    MeleeAttack();
                     currentState = BossAttackState.Rayo;
                     nextAttackTime = Time.time + attackCooldown;
                 }
@@ -96,8 +109,59 @@ public class BossEnemy : MonoBehaviour, IEnemy
         }
     }
 
-    public void Attack()
+    private void RayoAttack()
     {
+        if (rayoProjectilePrefab == null || targetDestination == null) return;
+
+        // Calcular dirección hacia el jugador
+        Vector2 direction = (targetDestination.position - firePoint.position).normalized;
+
+        // Crear el proyectil de rayo
+        GameObject rayoProjectile = Instantiate(rayoProjectilePrefab, firePoint.position, Quaternion.identity);
+
+        // Configurar el proyectil
+        RayoProjectile rayoScript = rayoProjectile.GetComponentInChildren<RayoProjectile>();
+        if (rayoScript != null)
+        {
+            rayoScript.SetDirection(direction);
+            rayoScript.SetDamage(rayoDamage);
+        }
+
+        // Rotar el proyectil para que apunte en la dirección correcta
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        rayoProjectile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        Debug.Log("Boss ejecutó ataque de rayo!");
+    }
+
+    private void ExplosionAttack()
+    {
+        if (explosionProjectilePrefab == null || targetDestination == null) return;
+
+        // Calcular dirección hacia el jugador
+        Vector2 direction = (targetDestination.position - firePoint.position).normalized;
+
+        // Crear el proyectil explosivo
+        GameObject explosionProjectile = Instantiate(explosionProjectilePrefab, firePoint.position, Quaternion.identity);
+
+        // Configurar el proyectil
+        ExplosionProjectile explosionScript = explosionProjectile.GetComponentInChildren<ExplosionProjectile>();
+        if (explosionScript != null)
+        {
+            explosionScript.SetDirection(direction);
+            explosionScript.SetDamage(explosionDamage);
+        }
+
+        // Rotar el proyectil para que apunte en la dirección correcta
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        explosionProjectile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        Debug.Log("Boss ejecutó ataque explosivo!");
+    }
+
+    private void MeleeAttack()
+    {
+        // Ataque cuerpo a cuerpo (el original)
         if (targetCharacter == null && targetGameObject != null)
         {
             targetCharacter = targetGameObject.GetComponent<Character>();
@@ -106,7 +170,14 @@ public class BossEnemy : MonoBehaviour, IEnemy
         if (targetCharacter != null)
         {
             targetCharacter.TakeDamage(damage);
+            Debug.Log("Boss ejecutó ataque cuerpo a cuerpo!");
         }
+    }
+
+    // Método mantenido para compatibilidad
+    public void Attack()
+    {
+        MeleeAttack();
     }
 
     public void TakeDamage(int damageAmount)
@@ -148,14 +219,13 @@ public class BossEnemy : MonoBehaviour, IEnemy
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, meleeRange);
     }
+
     private void DropItem()
     {
         // Genera el objeto en la posición del jefe con un pequeño desplazamiento
         Vector3 dropPosition = transform.position + new Vector3(Random.Range(-dropOffset, dropOffset), Random.Range(-dropOffset, dropOffset), 0);
-            // Dropea una moneda
-            Instantiate(coinPrefab, dropPosition, Quaternion.identity);
-            Debug.Log("¡Droppé una moneda!");
-        
-        
+        // Dropea una moneda
+        Instantiate(coinPrefab, dropPosition, Quaternion.identity);
+        Debug.Log("¡Droppé una moneda!");
     }
 }

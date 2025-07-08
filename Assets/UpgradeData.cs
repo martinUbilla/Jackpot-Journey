@@ -46,7 +46,7 @@ public class UpgradeData : ScriptableObject
                 currentLevel++;
                 shooter.GetComponentInChildren<CardShooter>().cardSpeed += 0.2f; // cada nivel +1 velocidad
                 shooter.SetInterval(Mathf.Max(0.3f, 1.5f - 0.1f * currentLevel)) ; // reduce intervalo hasta un mínimo
-                shooter.SetProjectileDamage( shooter.cardDamage * currentLevel);
+                shooter.SetProjectileDamage( shooter.cardDamage + (currentLevel*5));
                 Debug.Log($"[Upgrade] CardShooter mejorado ? Velocidad: {shooter.cardSpeed}, Intervalo: {shooter.shootInterval}");
             }
         }

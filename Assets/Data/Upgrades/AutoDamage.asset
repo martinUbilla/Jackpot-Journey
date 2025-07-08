@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrade: {fileID: 0}
   UpgradeType: 0
-  Name: 
+  Name: "Recibes Da\xF1o"
   icon: {fileID: -4315293883316760381, guid: 384546b47d928ab4f973a07b16a83f39, type: 3}
   currentLevel: 0
   cooldownDuration: 0

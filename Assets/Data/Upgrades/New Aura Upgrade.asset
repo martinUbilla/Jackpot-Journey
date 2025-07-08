@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrade: {fileID: 0}
   UpgradeType: 3
-  Name: DadoRotatorio
+  Name: Dado Rotatorio
   icon: {fileID: -1827265602048415635, guid: fa0194ba39671744d9ef749eb2e10a86, type: 3}
   currentLevel: 0
   cooldownDuration: 0

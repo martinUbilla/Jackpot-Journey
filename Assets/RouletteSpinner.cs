@@ -34,7 +34,7 @@ public class RouletteSpinner : MonoBehaviour
         }
 
         // Verificar si el jugador tiene suficientes monedas
-        if (playerStats != null && !playerStats.SpendCoins(3)) // Cambia el 3 por el costo que quieras
+        if (playerStats != null && !playerStats.SpendCoins(5)) // Cambia el 3 por el costo que quieras
         {
             if (resultText != null)
                 resultText.text = "¡No tienes suficientes monedas!";
@@ -126,7 +126,7 @@ public class RouletteSpinner : MonoBehaviour
 
         // Mostrar que está girando
         if (resultText != null)
-            resultText.text = "Girando...";
+            StartCoroutine(ShowTextWithDelay(resultText, "Girando ...", 1f));
 
         Debug.Log($"=== DEBUG RULETA ===");
         Debug.Log($"Efecto seleccionado: {effects[selectedIndex].name} (índice {selectedIndex})");
@@ -180,7 +180,7 @@ public class RouletteSpinner : MonoBehaviour
             resultIcon.sprite = selectedEffect.icon;
 
         if (resultText != null)
-            resultText.text = $"¡{selectedEffect.name}!";
+            StartCoroutine(ShowTextWithDelay(resultText, $"¡{selectedEffect.name}!", 1f));
 
         // Aplicar efecto al jugador
         selectedEffect.Apply(playerStats);
@@ -252,5 +252,18 @@ public class RouletteSpinner : MonoBehaviour
             currentRotation = 0f;
             wheel.localEulerAngles = Vector3.zero;
         }
+    }
+    private IEnumerator ShowTextWithDelay(TextMeshProUGUI textComponent, string message, float displayDuration)
+    {
+        // Mostrar el texto
+        textComponent.text = message;
+        textComponent.gameObject.SetActive(true);
+
+        // Esperar el tiempo especificado
+        yield return new WaitForSeconds(displayDuration);
+
+        // Ocultar el texto
+        textComponent.text = "";
+        textComponent.gameObject.SetActive(false);
     }
 }
